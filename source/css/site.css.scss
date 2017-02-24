@@ -14,8 +14,8 @@
 @import 'layouts/_grid.scss';
 @import 'layouts/_cards.scss';
 @import 'layouts/_flexbox.scss';
-@import 'helpers/_misc.scss';
 @import 'helpers/_helpers.scss';
+@import 'helpers/_misc.scss';
 @import 'helpers/_clearfix.scss';
 @import 'globals/_defaults.scss';
 
@@ -41,6 +41,7 @@
 
 @import 'modules/_header.scss';
 @import 'modules/_menu.scss';
+@import 'modules/_hero.scss';
 @import 'modules/_footer.scss';
 
 

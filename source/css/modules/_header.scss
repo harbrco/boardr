@@ -1,6 +1,192 @@
-.header-wrapper {
-	position: relative;
+.header-outer {
+	position: fixed;
 	z-index: 90;
+	transition: transform 0.2s cubic-bezier(0.340, 0.070, 0.095, 0.995);
+
+	&.headerHidden {
+		transform: translateY(-100%);
+	}
+}
+
+.header-wrapper {
+	&.hasBackground {
+	// These styles are duplicated down in the "headerAtHeroTop" section - change in both places
+		background-color: $white;
+		transition: background-color 0.4s ease;
+
+		.header {
+			background-color: $white;
+			transition: background-color 0.4s ease;
+
+			.logo {
+				background-image: url('../../img/logo-blk@2x.png');
+			}
+
+			.menu-desktop {
+				li {
+					a {
+						color: $black;
+					}
+
+					&.hasSubMenu {
+						&:hover {
+							ul.submenu {
+								transition-delay: 0.2s !important;
+							}
+						}
+					}
+				}
+
+				ul.submenu {
+					opacity: 1;
+					pointer-events: auto;
+					transition: transform 0.25s cubic-bezier(0.340, 0.070, 0.095, 0.995), opacity 0.1s linear 0.4s;
+
+					li {
+						a {
+							color: $white;
+							border-color: $black;
+
+							&:hover {
+								border-color: $white;
+							}
+						}
+					}
+				}
+			}
+
+			.search-link {
+				a {
+					color: $black;
+				}
+			}
+
+			.menu-desktop,
+			.search-link {
+				a {
+					border-bottom: 1px solid rgba($black, 0);
+
+					&:hover {
+						border-color: $black;
+					}
+				}
+			}
+		}
+	// These styles are duplicated down in the "headerAtHeroTop" section - change in both places
+	}
+
+	&.headerAtHeroTop {
+		background-color: transparent;
+		transition: background-color 0.4s ease;
+		transition-delay: 0.1s;
+
+		.header {
+			background-color: transparent;
+			transition: background-color 0.4s ease;
+			transition-delay: 0.1s;
+
+			.logo {
+				background-image: url('../../img/logo-wht@2x.png');
+			}
+
+			.menu-desktop {
+				li {
+					a {
+						color: $white;
+					}
+				}
+
+				ul.submenu {
+					opacity: 0;
+					pointer-events: none;
+					transition: transform 0.25s cubic-bezier(0.340, 0.070, 0.095, 0.995), opacity 0.1s linear;
+				}
+			}
+
+			.search-link {
+				a {
+					color: $white;
+				}
+			}
+
+			.menu-desktop,
+			.search-link {
+				a {
+					border-bottom: 1px solid rgba($white, 0);
+
+					&:hover {
+						border-color: $white;
+					}
+				}
+			}
+		}
+
+		&.hasBackground {
+		// These styles are duplicated up in the base "header-wrapper" section - change in both places
+			background-color: $white;
+			transition: background-color 0.4s ease;
+
+			.header {
+				background-color: $white;
+				transition: background-color 0.4s ease;
+
+				.logo {
+					background-image: url('../../img/logo-blk@2x.png');
+				}
+
+				.menu-desktop {
+					li {
+						a {
+							color: $black;
+						}
+
+						&.hasSubMenu {
+							&:hover {
+								ul.submenu {
+									transition-delay: 0.2s !important;
+								}
+							}
+						}
+					}
+
+					ul.submenu {
+						opacity: 1;
+						pointer-events: auto;
+						transition: transform 0.25s cubic-bezier(0.340, 0.070, 0.095, 0.995), opacity 0.1s linear 0.4s;
+
+						li {
+							a {
+								color: $white;
+								border-color: $black;
+
+								&:hover {
+									border-color: $white;
+								}
+							}
+						}
+					}
+				}
+
+				.search-link {
+					a {
+						color: $black;
+					}
+				}
+
+				.menu-desktop,
+				.search-link {
+					a {
+						border-bottom: 1px solid rgba($black, 0);
+
+						&:hover {
+							border-color: $black;
+						}
+					}
+				}
+			}
+		// These styles are duplicated up in the base "header-wrapper" section - change in both places
+		}
+	}
 }
 
 .header {
@@ -73,7 +259,7 @@
 			z-index: -1;
 			text-align: center;
 			transform: translateY(-100%);
-			transition: transform 0.25s ease;
+			transition: transform 0.25s cubic-bezier(0.340, 0.070, 0.095, 0.995);
 			padding: 30px 0;
 
 			li {

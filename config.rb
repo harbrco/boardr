@@ -14,6 +14,7 @@ set :js_dir, 'js'
 set :images_dir, 'img'
 
 activate :directory_indexes
+# activate :livereload, apply_js_live: false, apply_css_live: true
 
 
 # With alternative layout
@@ -28,6 +29,11 @@ activate :directory_indexes
 ###
 # Helpers
 ###
+
+# Reload the browser automatically whenever files change
+# configure :development do
+#   activate :livereload
+# end
 
 # Methods defined in the helpers block are available in templates
 # helpers do

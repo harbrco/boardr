@@ -10,3 +10,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
 gem 'middleman', '~> 4.2'
+
+# Live-reloading plugin
+gem "middleman-livereload"

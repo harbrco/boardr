@@ -1,0 +1,23 @@
+.hero {
+	.hero-slide {
+		@extend %bgCover--center;
+	}
+
+	.hero-content {
+		text-align: center;
+	}
+}
+
+.hero-wrapper {
+	.slider-arrows {
+		position: absolute;
+		bottom: 5%;
+		width: 100%;
+
+		.slick-next {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}

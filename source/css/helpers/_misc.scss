@@ -1,14 +1,86 @@
-// Reset bxSlider
-.bx-wrapper {
-   margin-bottom: 0;
+// Slick Slider
+.slick-slider {
+	user-select: text !important;
 }
-.bx-wrapper .bx-viewport {
-   -moz-box-shadow: none;
-   -webkit-box-shadow: none;
-   box-shadow: none;
-   border: none;
-   left: 0;
-   background: #fff;
-   margin: 0 !important;
+.slick-list.draggable {
+	user-select: none !important;
 }
-.bx-viewport li { min-height: 1px; min-width: 1px; }  // Fix for infinite loop weirdness
+
+.slick-dots {
+	.btn {
+		@extend %hoverTrans;
+		cursor: default;
+		font-size: 18px;
+		line-height: 22px;
+		padding-bottom: 6px;
+	}
+
+	&.pagerIsLight {
+		.btn {
+			color: $white;
+
+			&:after {
+				background-color: $white;
+				@extend %hoverTrans;
+			}
+		}
+	}
+
+	li {
+		&.slick-active {
+			.btn {
+				@extend %sans;
+
+
+				&:after {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+}
+
+
+.slider-arrows {
+	pointer-events: none;
+
+	button {
+		color: transparent;
+		border: none;
+		outline: none;
+		background: transparent;
+		pointer-events: auto;
+	}
+
+	.slick-next,
+	.slick-prev {
+		width: 33px;
+		height: 18px;
+		background-size: 33px 18px;
+		display: inline-block;
+		@extend %hoverTrans;
+
+		&:hover {
+			@include hoverFade(0.6);
+		}
+	}
+
+	&.whiteArrows {
+		.slick-next {
+			background-image: url('../../img/icons/slider-arrow-right-white@2x.png');
+		}
+		.slick-prev {
+			background-image: url('../../img/icons/slider-arrow-left-white@2x.png');
+		}
+	}
+
+	&.blackArrows {
+		.slick-next {
+			background-image: url('../../img/icons/slider-arrow-right-black@2x.png');
+		}
+		.slick-prev {
+			background-image: url('../../img/icons/slider-arrow-left-black@2x.png');
+		}
+	}
+}

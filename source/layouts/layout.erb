@@ -13,9 +13,13 @@
 		<title><%= current_page.data.title || "Middleman" %></title>
 
 		<%= stylesheet_link_tag "min/site-min" %>
+
+		<!-- Slick Slider Styles -->
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
 	</head>
 
-	<body class="<%= page_classes %>">
+	<body>
 		<%= partial "partials/header" %>
 
 		<%= yield %>
@@ -24,5 +28,8 @@
 
 		<%= javascript_include_tag "libs/jquery" %>
 		<%= javascript_include_tag "min/site-min" %>
+
+		<!-- Slick Slider Scripts -->
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	</body>
 </html>

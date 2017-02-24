@@ -50,6 +50,107 @@
 
 
 
+		// Slick Slider(s)
+		var heroSlider = $('.hero-slider');
+		var headerWrapper = $('.header-wrapper');
+
+		if ( heroSlider.length >= 1 ) {
+			// Hero Slider
+			// heroSlider.on('init', function(){
+			// 	var thisSlider = $(this);
+			// 	var thisCurrentSlide = thisSlider.find('.slick-current');
+			// 	var thisSliderPager = thisSlider.closest('.slider-container').find('.slick-dots');
+
+			// 	if ( thisCurrentSlide.hasClass('light-pager') ) {
+			// 		thisSliderPager.addClass('pagerIsLight');
+			// 	} else {
+			// 		thisSliderPager.addClass('pagerIsDark');
+			// 	}
+			// });
+
+			heroSlider.slick({
+				dots: false,
+				fade: true,
+				infinite: true,
+				draggable: false,
+				appendArrows: '.slider-arrows .inner',
+				customPaging : function(slider, i) {
+					$(slider.$slides[i]).data();
+					return '<a class="btn btn--alt">0'+(i+1)+'</a>';
+				}
+			}).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				var thisSlider = $(this);
+				var thisSliderPager = thisSlider.closest('.slider-container').find('.slick-dots');
+				var nextSlideEl = $(slick.$slides.get(nextSlide));
+
+				thisSliderPager.removeClass('pagerIsLight pagerIsDark');
+
+				if ( nextSlideEl.hasClass('light-pager') ) {
+					thisSliderPager.addClass('pagerIsLight');
+				} else {
+					thisSliderPager.addClass('pagerIsDark');
+				}
+			});
+
+			// make header transparent initially
+			headerWrapper.addClass('headerAtHeroTop');
+
+			var headerHeroTop = $('.header-wrapper.headerAtHeroTop');
+
+			// toggle menu background change on hover
+			headerWrapper.mouseenter(function() {
+				headerHeroTop.addClass('hasBackground');
+			}).mouseleave(function() {
+				headerHeroTop.removeClass('hasBackground');
+			});
+
+
+			// Waypoint to make header appear/dissapear
+			heroSlider.waypoint({
+				handler: function(direction) {
+					if (direction === 'down') {
+						headerWrapper.addClass('hasBackground');
+					} else {
+						headerWrapper.removeClass('hasBackground');
+					}
+				},
+				offset: -10
+			});
+
+			heroSlider.waypoint({
+				handler: function(direction) {
+					if (direction === 'down') {
+						headerWrapper.removeClass('headerAtHeroTop');
+					} else {
+						headerWrapper.addClass('headerAtHeroTop');
+					}
+				},
+				offset: -10
+			});
+		}
+
+		// Header appear disappear when scrolling down and up on page
+		var headerAppearBuffer;
+		var headerOuter = $('.header-outer');
+		var headerAppearBufferCalc = function(){
+			headerAppearBuffer = $('.middle-wrapper').position().top + 600;
+		};
+		headerAppearBufferCalc();
+
+		var lastScrollTop = 0;
+		$(window).scroll(function(){
+			var st = $(this).scrollTop();
+			if (st > headerAppearBuffer && st > lastScrollTop){
+				headerOuter.addClass('headerHidden');
+			} else {
+				headerOuter.removeClass('headerHidden');
+			}
+			lastScrollTop = st;
+		});
+
+
+
+
 		// AOS - Animate On Scroll
 		/* global AOS */
 		var aosInit = function() {
@@ -132,36 +233,36 @@
 
 
 
-		// MAKE SURE TO ADD ANY NEW LIBRARIES TO THIS INIT FUNCTION - - - - - - -
+		// MAKE SURE TO ADD ANY NEW LIBRARIES TO THIS INIT FUNCTION (For AJAX script reloading) - - - - - - -
 		/* jshint ignore:start */
-		var libsInit = function() {
-			vAlignShow();
-			vAlignFun();
-			aosInit();
+		// var libsInit = function() {
+		// 	vAlignShow();
+		// 	vAlignFun();
+		// 	aosInit();
 
-			$.stellar('destroy');
-			setTimeout(function(){
-				stellarJsInit();
-			}, 200);
+		// 	$.stellar('destroy');
+		// 	setTimeout(function(){
+		// 		stellarJsInit();
+		// 	}, 200);
 
-			screenSizeCalc();
-			smoothScroll();
+		// 	screenSizeCalc();
+		// 	smoothScroll();
 
-			setTimeout(function(){
-				Waypoint.refreshAll();
-				waypointInit();
-			}, 200);
+		// 	setTimeout(function(){
+		// 		Waypoint.refreshAll();
+		// 		waypointInit();
+		// 	}, 200);
 
-			$(window).resize(function() {
-				vAlignFun();
-				screenSizeCalc();
-			}).resize();
+		// 	$(window).resize(function() {
+		// 		vAlignFun();
+		// 		screenSizeCalc();
+		// 	}).resize();
 
-			// Listen for resize changes (mobile orientation change)
-			window.addEventListener("resize", function() {
-				vAlignFun();
-			}, false);
-		};
+		// 	// Listen for resize changes (mobile orientation change)
+		// 	window.addEventListener("resize", function() {
+		// 		vAlignFun();
+		// 	}, false);
+		// };
 		/* jshint ignore:end */
 
 

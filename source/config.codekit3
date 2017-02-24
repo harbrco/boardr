@@ -15,6 +15,12 @@
 		"oAP": "\/css\/.sass-cache\/0e59c3e1cfe4a9c47a3f1c9bad8251a1533b248e\/site.css.scssc",
 		"oF": 0
 		},
+	"\/css\/.sass-cache\/19fee33a73f271971c1628647bf3826d53bac38e\/normalize.scssc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/.sass-cache\/19fee33a73f271971c1628647bf3826d53bac38e\/normalize.scssc",
+		"oF": 0
+		},
 	"\/css\/.sass-cache\/2374325175404f12c9e54d3c80208be97691c8e1\/_footer.scssc": {
 		"ft": 8192,
 		"oA": 1,
@@ -25,6 +31,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/css\/.sass-cache\/2374325175404f12c9e54d3c80208be97691c8e1\/_header.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/2374325175404f12c9e54d3c80208be97691c8e1\/_hero.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/2374325175404f12c9e54d3c80208be97691c8e1\/_hero.scssc",
 		"oF": 0
 		},
 	"\/css\/.sass-cache\/2374325175404f12c9e54d3c80208be97691c8e1\/_menu.scssc": {
@@ -57,10 +69,64 @@
 		"oAP": "\/css\/.sass-cache\/309fb4144b5ad809f712f5efa17c44844d135ac7\/_layout.scssc",
 		"oF": 0
 		},
+	"\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_cards.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_cards.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_flexbox.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_flexbox.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_grid.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_grid.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_layout.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/36a1eecaf561c0ec0face22d9d670f182eda6d9a\/_layout.scssc",
+		"oF": 0
+		},
 	"\/css\/.sass-cache\/3c1c8c945e550a19cd494143ac1f1a3ec1c15a2e\/normalize.scssc": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/css\/.sass-cache\/3c1c8c945e550a19cd494143ac1f1a3ec1c15a2e\/normalize.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_breakpoints.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_breakpoints.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_defaults.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_defaults.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_print.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_print.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_retina-images.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_retina-images.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_vars.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_vars.scssc",
 		"oF": 0
 		},
 	"\/css\/.sass-cache\/6903b9dc25eb960129b98324b97a48536be8fbb6\/_breakpoints.scssc": {
@@ -105,6 +171,42 @@
 		"oAP": "\/css\/.sass-cache\/6c3e65b82151f8d9c4adf4b21aa16c7b82038c1f\/_forms.scssc",
 		"oF": 0
 		},
+	"\/css\/.sass-cache\/7ba032f191e56e3c97daa0e71c94c792e8376216\/_blog.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/7ba032f191e56e3c97daa0e71c94c792e8376216\/_blog.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/7ba032f191e56e3c97daa0e71c94c792e8376216\/_common.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/7ba032f191e56e3c97daa0e71c94c792e8376216\/_common.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_footer.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_footer.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_header.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_header.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_hero.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_hero.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_menu.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_menu.scssc",
+		"oF": 0
+		},
 	"\/css\/.sass-cache\/aeb5c624408f89f53ca112c38b911a2598c284d2\/_blog.scssc": {
 		"ft": 8192,
 		"oA": 1,
@@ -139,6 +241,48 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/css\/.sass-cache\/b87d86897a891cf74c3f15886c861630140dfe3f\/_selection.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/dfcd7299ed78b47be77345cde82996ebe4a32a01\/_buttons.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/dfcd7299ed78b47be77345cde82996ebe4a32a01\/_buttons.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/dfcd7299ed78b47be77345cde82996ebe4a32a01\/_forms.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/dfcd7299ed78b47be77345cde82996ebe4a32a01\/_forms.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_clearfix.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_clearfix.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_helpers.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_helpers.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_misc.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_misc.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_selection.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/e7b3d2e6e11f83a150ce57217b716d0322584556\/_selection.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/f3ca545d7831ff957d383576c3ff0b0b1ab002e0\/site.css.scssc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/.sass-cache\/f3ca545d7831ff957d383576c3ff0b0b1ab002e0\/site.css.scssc",
 		"oF": 0
 		},
 	"\/css\/components\/_buttons.scss": {
@@ -417,6 +561,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/modules\/_hero.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/modules\/_hero.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/modules\/_menu.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -481,11 +638,51 @@
 		"oAP": "\/img\/.keep",
 		"oF": 0
 		},
+	"\/img\/hero-1.jpg": {
+		"ft": 16384,
+		"iS": 390632,
+		"oA": 0,
+		"oAP": "\/img\/hero-1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/icons\/favicon.ico": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/img\/icons\/favicon.ico",
 		"oF": 0
+		},
+	"\/img\/icons\/slider-arrow-left-black@2x.png": {
+		"ft": 32768,
+		"iS": 610,
+		"oA": 0,
+		"oAP": "\/img\/icons\/slider-arrow-left-black@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/icons\/slider-arrow-left-white@2x.png": {
+		"ft": 32768,
+		"iS": 673,
+		"oA": 0,
+		"oAP": "\/img\/icons\/slider-arrow-left-white@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/icons\/slider-arrow-right-black@2x.png": {
+		"ft": 32768,
+		"iS": 606,
+		"oA": 0,
+		"oAP": "\/img\/icons\/slider-arrow-right-black@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/icons\/slider-arrow-right-white@2x.png": {
+		"ft": 32768,
+		"iS": 650,
+		"oA": 0,
+		"oAP": "\/img\/icons\/slider-arrow-right-white@2x.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/img\/icons\/touch.png": {
 		"ft": 32768,
@@ -500,6 +697,14 @@
 		"iS": 8808,
 		"oA": 0,
 		"oAP": "\/img\/logo-blk@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/logo-wht@2x.png": {
+		"ft": 32768,
+		"iS": 9125,
+		"oA": 0,
+		"oAP": "\/img\/logo-wht@2x.png",
 		"oF": 0,
 		"opt": 0
 		},
@@ -1975,7 +2180,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "FastClick,",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
