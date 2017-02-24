@@ -1,0 +1,78 @@
+$flexBase: $gutterBase;
+$flexNone: $gutterNone;
+$flexLarge: $gutterLarge;
+//this will pull from the
+//gutter margin in _grid.scss
+
+
+// $flexBase: 1.6%;
+// $flexNone: 0%;
+// $flexLarge: 7%;
+//optionally, you can change the margin to be
+//specific to flex by uncommenting the above lines
+
+.flex-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.flex {
+		flex: 1;
+	}
+
+	&.flex-margin .flex {
+		margin-left: $flexBase;
+	}
+	&.flex-margin--l .flex {
+		margin-left: $flexLarge;
+	}
+	&.flex-margin--none .flex {
+		margin-left: $flexNone;
+	}
+
+	&.row_of_2 {
+		.flex {
+			width: 50%;
+		}
+
+		.flex:nth-child(2n+1) {
+			margin-left: 0;
+		}
+	}
+	&.row_of_3 {
+		.flex {
+			width: 33.33%;
+		}
+
+		.flex:nth-child(3n+1) {
+			margin-left: 0;
+		}
+	}
+	&.row_of_4 {
+		.flex {
+			width: 25%;
+		}
+
+		.flex:nth-child(4n+1) {
+			margin-left: 0;
+		}
+	}
+	&.row_of_5 {
+		.flex {
+			width: 20%;
+		}
+
+		.flex:nth-child(5n+1) {
+			margin-left: 0;
+		}
+	}
+	&.row_of_6 {
+		.flex {
+			width: 16.66%;
+		}
+
+		.flex:nth-child(6n+1) {
+			margin-left: 0;
+		}
+	}
+}

@@ -9,6 +9,13 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :css_dir, 'css'
+set :js_dir, 'js'
+set :images_dir, 'img'
+
+activate :directory_indexes
+
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 

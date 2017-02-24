@@ -1,0 +1,177 @@
+.wrapper {
+	@extend %clear;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+
+.container {
+	@extend %clear;
+	width: 90%;
+	max-width: 1400px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.container--full {
+	@extend %clear;
+	width: 94%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.container--l {
+	@extend %clear;
+	width: 90%;
+	max-width: 1820px;
+	margin: 0 auto;
+	position: relative;
+}
+.container--s {
+	@extend %clear;
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media only screen and (max-width:1140px) {
+	.container {
+		width: 84%;
+	}
+}
+@media only screen and (max-width:900px) {
+	.container {
+		width: 88%;
+	}
+}
+@media only screen and (max-width:680px) {
+	.container--full,
+	.container {
+		width: 90%;
+	}
+}
+
+
+
+$well: 90px;
+$well--xl: 290px;
+$well--l: 180px;
+$well--s: 60px;
+// These variables need to be changed down throughout the breakpoints
+
+.well { padding-top: $well; padding-bottom: $well; }
+.well--xl { padding-top: $well--xl; padding-bottom: $well--xl; }
+.well--l { padding-top: $well--l; padding-bottom: $well--l; }
+.well--s { padding-top: $well--s; padding-bottom: $well--s; }
+
+.pt--xl { padding-top: $well--xl; }
+.pt--l { padding-top: $well--l; }
+.pt--s { padding-top: $well--s; }
+.pt--none { padding-top: 0; }
+
+.pb--xl { padding-bottom: $well--xl; }
+.pb--l { padding-bottom: $well--l; }
+.pb--s { padding-bottom: $well--s; }
+.pb--none { padding-bottom: 0; }
+
+@media only screen and (max-width:1440px) {
+	$well: 6%;
+	$well--xl: 18%;
+	$well--l: 12%;
+	$well--s: 4%;
+
+	.well { padding-top: $well; padding-bottom: $well; }
+	.well--xl { padding-top: $well--xl; padding-bottom: $well--xl; }
+	.well--l { padding-top: $well--l; padding-bottom: $well--l; }
+	.well--s { padding-top: $well--s; padding-bottom: $well--s; }
+
+	.pt--xl { padding-top: $well--xl; }
+	.pt--l { padding-top: $well--l; }
+	.pt--s { padding-top: $well--s; }
+
+	.pb--xl { padding-bottom: $well--xl; }
+	.pb--l { padding-bottom: $well--l; }
+	.pb--s { padding-bottom: $well--s; }
+}
+
+@media only screen and (max-width:1260px) {
+	$well: 8%;
+	$well--xl: 22%;
+	$well--l: 17%;
+	$well--s: 5%;
+
+	.well { padding-top: $well; padding-bottom: $well; }
+	.well--xl { padding-top: $well--xl; padding-bottom: $well--xl; }
+	.well--l { padding-top: $well--l; padding-bottom: $well--l; }
+	.well--s { padding-top: $well--s; padding-bottom: $well--s; }
+
+	.pt--xl { padding-top: $well--xl; }
+	.pt--l { padding-top: $well--l; }
+	.pt--s { padding-top: $well--s; }
+
+	.pb--xl { padding-bottom: $well--xl; }
+	.pb--l { padding-bottom: $well--l; }
+	.pb--s { padding-bottom: $well--s; }
+}
+
+@media only screen and (max-width:1024px) {
+	$well: 9%;
+	$well--xl: 24%;
+	$well--l: 19%;
+	$well--s: 6%;
+
+	.well { padding-top: $well; padding-bottom: $well; }
+	.well--xl { padding-top: $well--xl; padding-bottom: $well--xl; }
+	.well--l { padding-top: $well--l; padding-bottom: $well--l; }
+	.well--s { padding-top: $well--s; padding-bottom: $well--s; }
+
+	.pt--xl { padding-top: $well--xl; }
+	.pt--l { padding-top: $well--l; }
+	.pt--s { padding-top: $well--s; }
+
+	.pb--xl { padding-bottom: $well--xl; }
+	.pb--l { padding-bottom: $well--l; }
+	.pb--s { padding-bottom: $well--s; }
+}
+
+@media only screen and (max-width:768px) {
+	$well: 11%;
+	$well--xl: 28%;
+	$well--l: 22%;
+	$well--s: 8%;
+
+	.well { padding-top: $well; padding-bottom: $well; }
+	.well--xl { padding-top: $well--xl; padding-bottom: $well--xl; }
+	.well--l { padding-top: $well--l; padding-bottom: $well--l; }
+	.well--s { padding-top: $well--s; padding-bottom: $well--s; }
+
+	.pt--xl { padding-top: $well--xl; }
+	.pt--l { padding-top: $well--l; }
+	.pt--s { padding-top: $well--s; }
+
+	.pb--xl { padding-bottom: $well--xl; }
+	.pb--l { padding-bottom: $well--l; }
+	.pb--s { padding-bottom: $well--s; }
+}
+@media only screen and (max-width:520px) {
+	$well: 13%;
+	$well--xl: 30%;
+	$well--l: 24%;
+	$well--s: 10%;
+
+	.well { padding-top: $well; padding-bottom: $well; }
+	.well--xl { padding-top: $well--xl; padding-bottom: $well--xl; }
+	.well--l { padding-top: $well--l; padding-bottom: $well--l; }
+	.well--s { padding-top: $well--s; padding-bottom: $well--s; }
+
+	.pt--xl { padding-top: $well--xl; }
+	.pt--l { padding-top: $well--l; }
+	.pt--s { padding-top: $well--s; }
+
+	.pb--xl { padding-bottom: $well--xl; }
+	.pb--l { padding-bottom: $well--l; }
+	.pb--s { padding-bottom: $well--s; }
+}

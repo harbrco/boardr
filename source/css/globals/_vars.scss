@@ -1,0 +1,39 @@
+// COLOR VARIABLES = = = = = = =
+
+$primary: #00ffcc;		// Primary is Bright Teal
+$secondary: #2a9a7c;		// Secondary is Green
+
+$lightGray: #f6f6f6;
+$medGrayLt: #d7d7d7;
+$medGray: #777777;
+$medGrayDk: #555555;
+$darkGray: #353333;
+
+$white: #fff;
+$black: #000;
+
+$test: #62e920;		// Test is a bright green just for testing purposes
+
+
+// FONT VARIABLES = = = = = = =
+
+$sans: "sofia-pro", Helvetica, sans-serif;		// Sofia Pro has weights of 200, 300, & 400
+
+%sans {
+	font-family: $sans;
+	font-weight: 400;
+}
+
+%sansLt {
+	@extend %sans;
+	font-weight: 300;
+}
+
+%sansXLt {
+	@extend %sans;
+	font-weight: 200;
+}
+%sansXLtIt {
+	@extend %sansXLt;
+	font-style: italic;
+}

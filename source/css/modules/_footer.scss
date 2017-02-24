@@ -1,0 +1,42 @@
+.footer {
+	.footer-columns {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.footer-right {
+		border-left: 1px solid $white;
+		padding-left: 5%;
+	}
+
+	.footer-left {
+
+	}
+}
+
+.footer-links {
+	li {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 32px;
+		letter-spacing: 2px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: $white;
+			border-bottom: 1px solid $black;
+			@extend %hoverTrans;
+
+			&:hover {
+				border-color: $white;
+			}
+		}
+	}
+}
+
+
+// FOOTER BREAKPOINTS = = = = = = =
+

@@ -1,0 +1,309 @@
+// VERTICAL ALIGN - ASSISTED BY JAVASCRIPT - - - - - - -
+.vAlign {
+	position: relative;
+	visibility: hidden; /* <- needed to hide flash of non vertical aligned content before complete page load. */
+}
+.vAlign-abs {
+	position: absolute;
+	visibility: hidden; /* <- needed to hide flash of non vertical aligned content before complete page load. */
+}
+
+
+// GLOBAL HOVER TRANSITIONS - - - - - - -
+%hoverTrans {
+	transition: all 0.2s ease;
+}
+%hoverTransL {
+	transition: all 1s ease;
+}
+
+@mixin hoverFade($fadeOpacity) {
+	opacity: $fadeOpacity;
+}
+
+
+// NO TEXT WORD-WRAPPING - - - - - - -
+.noWrap {
+	white-space: nowrap;
+}
+
+
+// FORCE LINK TAKE UP THE WHOLE SPACE OF ITS PARENT - - - - - - -
+%linkblock {
+	width: 100%; height: 100%; display: block; cursor: pointer;
+}
+
+
+// FORCE ELEMENT TO TAKE UP ALL OF SPACE OF ITS PARENT - Element's Parent needs to be position: relative, absolute, or fixed.
+%absFill {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+//	SHOW / HIDE STUFF! - - - - - - -
+.isHidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+.isVisible {
+	display: block !important;
+	visibility: visible !important;
+}
+.isHidden--desktop {
+	display: none;
+	visibility: hidden;
+}
+.isVisible--desktop {
+	display: block;
+	visibility: visible;
+}
+.isHidden--tablet {
+	display: block;
+	visibility: visible;
+}
+.isVisible--tablet {
+	display: none;
+	visibility: hidden;
+}
+.isHidden--mobile {
+	display: block;
+	visibility: visible;
+}
+.isVisible--mobile {
+	display: none;
+	visibility: hidden;
+}
+@media only screen and (max-width:1024px) {
+	.isVisible--tablet {
+		display: block;
+		visibility: visible;
+	}
+	.isHidden--tablet {
+		display: none;
+		visibility: hidden;
+	}
+
+	.isHidden--desktop {
+		display: block;
+		visibility: visible;
+	}
+	.isVisible--desktop {
+		display: none;
+		visibility: hidden;
+	}
+}
+@media only screen and (max-width:768px) {
+	.isVisible--tablet {
+		display: none;
+		visibility: hidden;
+	}
+	.isHidden--tablet {
+		display: block;
+		visibility: visible;
+	}
+	.isHidden--mobile {
+		display: none;
+		visibility: hidden;
+	}
+	.isVisible--mobile {
+		display: block;
+		visibility: visible;
+	}
+
+}
+
+
+
+// BACKGROUND IMAGE SIZE/POSITION - - - - - - -
+%bgCover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+%bgCover--center {
+	@extend %bgCover;
+	background-position: center center;
+}
+%bgCover--bottom {
+	@extend %bgCover;
+	background-position: center bottom;
+}
+
+
+// BACKGROUND COLOR STATUS - - - - - - -
+.bgIsDark {
+	color: $white;
+}
+
+.bgIsLight {
+	color: $black;
+}
+
+.isBlack {
+	background-color: $black;
+}
+
+.isWhite {
+	background-color: $white;
+}
+
+.isDarkGray {
+	background-color: $darkGray;
+}
+
+.isLightGray {
+	background-color: $lightGray;
+}
+
+.isPrimary {
+	background-color: $primary;
+}
+
+.isSecondary {
+	background-color: $secondary;
+}
+
+
+// OVERLAYS - - - - - - -
+.hasOverlay {
+	position: relative;
+	z-index: 1;
+
+	.overlay {
+		@extend %absFill;
+		background-color: rgba($black, 0.3);
+		z-index: 2;
+
+		&.overlay--5 {
+			background-color: rgba($black, 0.5);
+		}
+
+		&.overlay--75 {
+			background-color: rgba($black, 0.75);
+		}
+	}
+
+	.overlay-content {
+		position: relative;
+		z-index: 3;
+		color: $white;
+
+		.inner {
+			padding: 10%;
+		}
+	}
+}
+
+
+// HOVER ZOOM / FADE - - - - - - -
+.hasHoverFade {
+	position: relative;
+
+	.bg-img {
+		@extend %absFill;
+		@extend %bgCover--center;
+		@extend %hoverTrans;
+	}
+
+	&:hover {
+		.bg-img {
+			@include hoverFade(0.6);
+		}
+	}
+}
+
+.hasHoverZoom {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	.bg-img {
+		@extend %absFill;
+		@extend %bgCover--center;
+		transform: matrix(1, 0, 0, 1, 0, 0);
+		transition: transform 750ms cubic-bezier(0.255, 0.285, 0.420, 0.980);
+	}
+
+	&:hover {
+		.bg-img {
+			transform: matrix(1.15, 0, 0, 1.15, 0, 0);
+			transition: transform 6000ms cubic-bezier(0.235, 0.070, 0.670, 0.950);
+		}
+	}
+}
+
+.hasHoverZoomFade {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	.bg-img {
+		@extend %absFill;
+		@extend %bgCover--center;
+		transform: matrix(1, 0, 0, 1, 0, 0);
+		transition: opacity 0.75s linear, transform 750ms cubic-bezier(0.255, 0.285, 0.420, 0.980);
+	}
+
+	&:hover {
+		.bg-img {
+			@include hoverFade(0.6);
+			transform: matrix(1.15, 0, 0, 1.15, 0, 0);
+			transition: opacity 1.5s linear, transform 6000ms cubic-bezier(0.235, 0.070, 0.670, 0.950);
+		}
+	}
+}
+
+
+// RETINA IMAGES - - - - - - -
+@mixin image-2x($image, $width, $height) {
+	@media	(min--moz-device-pixel-ratio: 1.3),
+				(-o-min-device-pixel-ratio: 2.6/2),
+				(-webkit-min-device-pixel-ratio: 1.3),
+				(min-device-pixel-ratio: 1.3),
+				(min-resolution: 1.3dppx) {
+		background-image: url($image); // <- path to retina version of image
+		background-size: $width $height; // <- normal display or "half-of-retina" dimensions
+	}
+}
+
+
+// BORDER RADIUS - - - - - - -
+// All corners with equal radius
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	background-clip: padding-box; // <- stops bg color from leaking outside the border
+}
+
+// Custom 4-corner radius
+@mixin border-radius-custom($topRight, $bottomRight, $bottomLeft, $topLeft) {
+	border-top-right-radius: $topRight;
+	border-bottom-right-radius: $bottomRight;
+	border-bottom-left-radius: $bottomLeft;
+	border-top-left-radius: $topLeft;
+	background-clip: padding-box; // <- stops bg color from leaking outside the border
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+	border-top-right-radius: $radius;
+	border-top-left-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+	border-bottom-right-radius: $radius;
+	border-top-right-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+	border-bottom-right-radius: $radius;
+	border-bottom-left-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+	border-bottom-left-radius: $radius;
+	border-top-left-radius: $radius;
+	background-clip: padding-box;
+}

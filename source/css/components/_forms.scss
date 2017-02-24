@@ -1,0 +1,50 @@
+input:focus {
+	outline: 0;
+	border: 1px solid $primary;
+}
+
+
+
+// GRAVITY FORMS = = = = = = =
+.gform_wrapper {
+	display: block !important;
+
+	.gform_body,
+	.gform_body ul {
+		@extend %clear;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin-bottom: 20px;
+
+			input,
+			textarea {
+				//color: $med-dark-gray;
+				font-size: 20px;
+				line-height: 20px;
+				//border: 2px solid $med-light-gray;
+				border-radius: 4px;
+				padding: 10px 18px;
+
+				&:focus {
+					outline: none;
+					//border-color: $primary;
+				}
+			}
+			textarea {
+				width: 100%;
+				padding: 12px 17px;
+			}
+		}
+	}
+
+	label.gfield_label {
+		display: none;
+	}
+
+}

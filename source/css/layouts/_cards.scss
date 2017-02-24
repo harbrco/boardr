@@ -1,0 +1,14 @@
+.card-list {
+   padding: 0;
+
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.card {
+   padding: 0 6%;
+
+   .inner {
+      padding: 12% 0;
+   }
+}

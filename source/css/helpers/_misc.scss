@@ -1,0 +1,14 @@
+// Reset bxSlider
+.bx-wrapper {
+   margin-bottom: 0;
+}
+.bx-wrapper .bx-viewport {
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+   border: none;
+   left: 0;
+   background: #fff;
+   margin: 0 !important;
+}
+.bx-viewport li { min-height: 1px; min-width: 1px; }  // Fix for infinite loop weirdness

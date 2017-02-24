@@ -1,0 +1,59 @@
+.vAlign {
+   position: relative;
+   visibility: hidden; /* <- needed to hide flash of non vertical aligned content before complete page load. */
+
+   &.vAlign-abs {
+      position: absolute;
+      visibility: hidden; /* <- needed to hide flash of non vertical aligned content before complete page load. */
+   }
+}
+
+
+// MOBILE MENU SWAP - - - - - - -
+#mobile-menu-wrap {
+	display: none;
+
+	#menu-icon {
+		background: transparent;
+		padding: 14px 0 0;
+		cursor: pointer;
+		display: block; /* show menu icon */
+		text-align: center;
+		color: #444;
+		font-size: 20px;
+		font-weight: 400;
+		position: relative;
+		z-index: 98;
+		vertical-align: top;
+		color: $white;
+
+		.icon {
+			background: url(../img/menu-icon.png) no-repeat;
+			@extend %linkblock;
+			background-size: 40px 160px;
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			margin: -2px 0 0 8px;
+		}
+	}
+
+	ul.menu {
+		padding-bottom: 12px;
+	}
+}
+
+
+// FOR BLOG CATEGORIES MENU
+@media only screen and (max-width:800px) {
+	#desktop-menu-wrap {
+		display: none;
+	}
+	#mobile-menu-wrap {
+		position: relative;
+		display: block;
+	}
+	#mobile-menu {
+		display: none;
+	}
+}
