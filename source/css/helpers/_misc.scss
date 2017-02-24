@@ -6,40 +6,40 @@
 	user-select: none !important;
 }
 
-.slick-dots {
-	.btn {
-		@extend %hoverTrans;
-		cursor: default;
-		font-size: 18px;
-		line-height: 22px;
-		padding-bottom: 6px;
-	}
+// .slick-dots {
+// 	.btn {
+// 		@extend %hoverTrans;
+// 		cursor: default;
+// 		font-size: 18px;
+// 		line-height: 22px;
+// 		padding-bottom: 6px;
+// 	}
 
-	&.pagerIsLight {
-		.btn {
-			color: $white;
+// 	&.pagerIsLight {
+// 		.btn {
+// 			color: $white;
 
-			&:after {
-				background-color: $white;
-				@extend %hoverTrans;
-			}
-		}
-	}
+// 			&:after {
+// 				background-color: $white;
+// 				@extend %hoverTrans;
+// 			}
+// 		}
+// 	}
 
-	li {
-		&.slick-active {
-			.btn {
-				@extend %sans;
+// 	li {
+// 		&.slick-active {
+// 			.btn {
+// 				@extend %sans;
 
 
-				&:after {
-					opacity: 1;
-					transform: translateX(0);
-				}
-			}
-		}
-	}
-}
+// 				&:after {
+// 					opacity: 1;
+// 					transform: translateX(0);
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 
 .slider-arrows {

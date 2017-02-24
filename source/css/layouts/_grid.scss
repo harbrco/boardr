@@ -41,7 +41,7 @@
 $baseFS: 16px;  // <-- Change this if needed
 
 // Change the gutter values based on grid designs
-$gutterBase: 1.6%;
+$gutterBase: 2.5%;
 $gutterNone: 0%;
 $gutterMed: 5%;
 $gutterLarge: 7%;
@@ -207,10 +207,10 @@ $gutterLarge: 7%;
 @media only screen and (max-width:900px) {
 	//Here, we reset the variables based on breakpoint.
 	//Change them here if you want gutter size to change based on tablet!
-	$gutterBase: 1.6%;
+	$gutterBase: 2.5%;
 	$gutterNone: 0%;
-	$gutterMed: 5%;
-	$gutterLarge: 7%;
+	$gutterMed: 7%;
+	$gutterLarge: 10%;
 
 
 	.gutter {
@@ -256,6 +256,7 @@ $gutterLarge: 7%;
 
 		.tablet_full_span {
 			width: 100%;
+			margin-left: 0;
 		}
 	}
 
@@ -299,6 +300,11 @@ $gutterLarge: 7%;
 				margin-bottom: $gutter;
 			}
 		}
+
+		.tablet_full_span {
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 
 	.gutter--l {
@@ -341,7 +347,13 @@ $gutterLarge: 7%;
 				margin-bottom: $gutter;
 			}
 		}
+
+		.tablet_full_span {
+			width: 100%;
+			margin-left: 0;
+		}
 	}
+
 	.gutter--m {
 		$gutter: $gutterMed;
 
@@ -382,6 +394,11 @@ $gutterLarge: 7%;
 				margin-bottom: $gutter;
 			}
 		}
+
+		.tablet_full_span {
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 
 
@@ -405,7 +422,7 @@ $gutterLarge: 7%;
 @media only screen and (max-width:580px) {
 	//Here, we reset the variables based on breakpoint.
 	//Change them here if you want gutter size to change based on mobile!
-	$gutterBase: 1.6%;
+	$gutterBase: 2.5%;
 	$gutterNone: 0%;
 	$gutterMed: 5%;
 	$gutterLarge: 7%;
