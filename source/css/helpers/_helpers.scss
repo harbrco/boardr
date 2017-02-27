@@ -12,9 +12,11 @@
 // GLOBAL HOVER TRANSITIONS - - - - - - -
 %hoverTrans {
 	transition: all 0.2s ease;
+	-webkit-backface-visibility: hidden;
 }
 %hoverTransL {
 	transition: all 1s ease;
+	-webkit-backface-visibility: hidden;
 }
 
 @mixin hoverFade($fadeOpacity) {

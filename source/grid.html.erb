@@ -1,0 +1,154 @@
+---
+title: Grid System
+---
+
+<style>
+.pattern-test-grid {
+	background: darkgray;
+	padding: 20px;
+}
+
+.pattern-test-grid .col {
+	background: gray;
+	min-height: 30px;
+	box-shadow: inset 0 0 1px black;
+}
+</style>
+
+
+<div class="wrapper isWhite well--l">
+	<div class="container">
+		<h2 class="pattern-section-sub-heading">single row / 3 columns</h2>
+		<div class="grid-group pattern-test-grid gutter">
+			<div class="col span_1_of_3"></div>
+			<div class="col span_1_of_3"></div>
+			<div class="col span_1_of_3"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">single row / 2 diff-size columns</h2>
+		<div class="grid-group pattern-test-grid gutter">
+			<div class="col span_4_of_12"></div>
+			<div class="col span_8_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_2 / gutter</h2>
+		<div class="grid-group pattern-test-grid gutter row_of_2 hasRows">
+			<div class="col span_6_of_12"></div>
+			<div class="col span_6_of_12"></div>
+			<div class="col span_6_of_12"></div>
+			<div class="col span_6_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_2 / gutter</h2>
+		<div class="grid-group pattern-test-grid gutter row_of_2 row_of_3--tablet row_of_2--mobile hasRows hasRows--tablet hasRows--mobile">
+			<div class="col span_6_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_6_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_6_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_6_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_6_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_6_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_4 / gutter--m</h2>
+		<div class="grid-group pattern-test-grid gutter--m row_of_4 row_of_3--tablet row_of_2--mobile hasRows hasRows--tablet hasRows--mobile">
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_3 / gutter--l</h2>
+		<div class="grid-group pattern-test-grid gutter--l row_of_3 hasRows">
+			<div class="col span_4_of_12"></div>
+			<div class="col span_4_of_12"></div>
+			<div class="col span_4_of_12"></div>
+			<div class="col span_4_of_12"></div>
+			<div class="col span_4_of_12"></div>
+			<div class="col span_4_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_4 / gutter--none</h2>
+		<div class="grid-group pattern-test-grid gutter--none row_of_4 hasRows">
+			<div class="col span_3_of_12"></div>
+			<div class="col span_3_of_12"></div>
+			<div class="col span_3_of_12"></div>
+			<div class="col span_3_of_12"></div>
+			<div class="col span_3_of_12"></div>
+			<div class="col span_3_of_12"></div>
+			<div class="col span_3_of_12"></div>
+			<div class="col span_3_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_4 / gutter--none</h2>
+		<div class="grid-group pattern-test-grid gutter--none row_of_4 row_of_3--tablet row_of_2--mobile hasRows hasRows--tablet hasRows--mobile">
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+			<div class="col span_3_of_12 tablet_4_of_12 mobile_6_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_5</h2>
+		<div class="grid-group pattern-test-grid gutter row_of_5 hasRows">
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+			<div class="col span_2_of_10"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_6</h2>
+		<div class="grid-group pattern-test-grid gutter--m row_of_6 row_of_4--tablet row_of_2--mobile hasRows hasRows--tablet hasRows--mobile">
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+		</div>
+
+		<br>
+		<h2 class="pattern-section-sub-heading">row_of_6</h2>
+		<div class="grid-group pattern-test-grid gutter row_of_6 row_of_4--tablet row_of_2--mobile hasRows hasRows--tablet hasRows--mobile">
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+			<div class="col span_2_of_12 tablet_3_of_12 mobile_6_of_12"></div>
+		</div>
+	</div>
+</div>

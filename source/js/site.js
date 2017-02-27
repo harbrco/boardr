@@ -50,7 +50,30 @@
 
 
 
-		// Slick Slider(s)
+		// Screen Size Calculations
+		var vpHeight;
+		var screenSizeCalc = function(){
+			vpHeight = $(window).height();
+			$('.fullVP').css('min-height', vpHeight);
+			$('.mediumVP').css('min-height', vpHeight * 0.7);
+		};
+		screenSizeCalc();
+
+		var headerHeight;
+		var headerHeightCalc = function(){
+			headerHeight = $('.header-outer').outerHeight();
+		};
+		headerHeightCalc();
+
+
+		$(window).resize(function() {
+			screenSizeCalc();
+			headerHeightCalc();
+		}).resize();
+
+
+
+		// Hero Scripts
 		var heroSlider = $('.hero-slider');
 		var headerWrapper = $('.header-wrapper');
 
@@ -127,6 +150,17 @@
 				},
 				offset: -10
 			});
+
+		} else {
+			// NO HERO on page - add top padding to middle-wrapper to push content down.
+			var headerSpacingCalc = function(){
+				$('.middle-wrapper').css('padding-top', headerHeight);
+			};
+			headerSpacingCalc();
+
+			$(window).resize(function() {
+				headerSpacingCalc();
+			}).resize();
 		}
 
 		// Header appear disappear when scrolling down and up on page
@@ -176,22 +210,6 @@
 			}
 		};
 		stellarJsInit();
-
-
-
-		// Screen Size Calculations
-		var vpHeight;
-		var screenSizeCalc = function(){
-			vpHeight = $(window).height();
-			$('.fullVP').css('min-height', vpHeight);
-			$('.mediumVP').css('min-height', vpHeight * 0.7);
-		};
-		screenSizeCalc();
-
-
-		$(window).resize(function() {
-			screenSizeCalc();
-		}).resize();
 
 
 

@@ -9,6 +9,18 @@
 	],
 "creatorBuild": "25504",
 "files": {
+	"\/buttons.html.erb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/buttons.html.erb",
+		"oF": 0
+		},
+	"\/cards.html.erb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/cards.html.erb",
+		"oF": 0
+		},
 	"\/css\/.sass-cache\/0e59c3e1cfe4a9c47a3f1c9bad8251a1533b248e\/site.css.scssc": {
 		"ft": 8192,
 		"oA": 2,
@@ -121,6 +133,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_retina-images.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_typography.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_typography.scssc",
 		"oF": 0
 		},
 	"\/css\/.sass-cache\/536e7b774fb09a5009fbecf704498881c2fa8193\/_vars.scssc": {
@@ -359,6 +377,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/globals\/_retina-images.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/globals\/_typography.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/globals\/_typography.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -626,6 +657,12 @@
 		"oS": 0,
 		"uL": 0
 		},
+	"\/grid.html.erb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/grid.html.erb",
+		"oF": 0
+		},
 	"\/hero.html.erb": {
 		"ft": 8192,
 		"oA": 2,
@@ -637,6 +674,46 @@
 		"oA": 2,
 		"oAP": "\/img\/.keep",
 		"oF": 0
+		},
+	"\/img\/card-img-1a.jpg": {
+		"ft": 16384,
+		"iS": 164026,
+		"oA": 0,
+		"oAP": "\/img\/card-img-1a.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/card-img-1b.jpg": {
+		"ft": 16384,
+		"iS": 208837,
+		"oA": 0,
+		"oAP": "\/img\/card-img-1b.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/card-img-2a.jpg": {
+		"ft": 16384,
+		"iS": 38709,
+		"oA": 0,
+		"oAP": "\/img\/card-img-2a.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/card-img-2b.jpg": {
+		"ft": 16384,
+		"iS": 53034,
+		"oA": 0,
+		"oAP": "\/img\/card-img-2b.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/card-img-2c.jpg": {
+		"ft": 16384,
+		"iS": 62633,
+		"oA": 0,
+		"oAP": "\/img\/card-img-2c.jpg",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/img\/hero-1.jpg": {
 		"ft": 16384,
@@ -832,6 +909,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/partials\/_header.erb",
+		"oF": 0
+		},
+	"\/typography.html.erb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/typography.html.erb",
 		"oF": 0
 		}
 	},

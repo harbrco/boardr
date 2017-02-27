@@ -1,14 +1,43 @@
 .card-list {
-   padding: 0;
 
-   display: flex;
-   flex-wrap: wrap;
 }
 
 .card {
-   padding: 0 6%;
+	.card-img {
+		@extend %hoverTrans;
+		margin-bottom: 30px;
 
-   .inner {
-      padding: 12% 0;
-   }
+		&:hover {
+			@include hoverFade(0.6);
+		}
+	}
+
+	.card-text {
+		margin-bottom: 30px;
+
+		h3 {
+			font-size: 20px;
+			line-height: 24px;
+			letter-spacing: 2px;
+			margin-bottom: 6px;
+		}
+
+		p {
+			margin-top: 4px;
+			margin-bottom: 2px;
+			line-height: 18px;
+
+			&:last-child {
+				margin-bottom: 8px;
+			}
+		}
+
+		a.text-link {
+			font-size: 15px;
+			line-height: 18px;
+			margin-top: 12px;
+			letter-spacing: 1px;
+			display: inline-block;
+		}
+	}
 }

@@ -10,11 +10,12 @@
 //----------------------------------*/
 
 @import 'globals/_vars.scss';
+@import 'helpers/_helpers.scss';
+@import 'globals/_typography.scss';
 @import 'layouts/_layout.scss';
 @import 'layouts/_grid.scss';
-@import 'layouts/_cards.scss';
 @import 'layouts/_flexbox.scss';
-@import 'helpers/_helpers.scss';
+@import 'layouts/_cards.scss';
 @import 'helpers/_misc.scss';
 @import 'helpers/_clearfix.scss';
 @import 'globals/_defaults.scss';

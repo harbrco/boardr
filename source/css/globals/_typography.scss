@@ -1,0 +1,91 @@
+// All these typography styles affect is content in the middle of the page, not in header or footer
+.middle-wrapper {
+	.center-text {
+		text-align: center;
+	}
+
+	h1,
+	.h1 {
+		font-size: 50px;
+		line-height: 54px;
+		letter-spacing: 4px;
+		margin-bottom: 30px;
+	}
+
+	h2,
+	.h2 {
+		font-size: 40px;
+		line-height: 44px;
+		letter-spacing: 4px;
+		margin-bottom: 26px;
+	}
+
+	h3,
+	.h3 {
+		font-size: 30px;
+		line-height: 34px;
+		letter-spacing: 3px;
+		margin-bottom: 22px;
+	}
+
+	h4,
+	.h4 {
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 2px;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 24px;
+		margin-bottom: 20px;
+		letter-spacing: 1px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul,
+	ol {
+		font-size: 15px;
+		line-height: 24px;
+		margin-bottom: 20px;
+		letter-spacing: 1px;
+
+		li {
+			line-height: 19px;
+			margin-bottom: 14px;
+			margin-left: 60px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	ul {
+		li {
+			list-style-type: disc;
+		}
+	}
+
+	ol {
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&.btn {
+			text-decoration: none;
+		}
+	}
+}
