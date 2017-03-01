@@ -1,6 +1,12 @@
 // Slick Slider
 .slick-slider {
 	user-select: text !important;
+
+	.slick-slide {
+		&:focus {
+			outline: none;
+		}
+	}
 }
 .slick-list.draggable {
 	user-select: none !important;
@@ -51,6 +57,7 @@
 		outline: none;
 		background: transparent;
 		pointer-events: auto;
+		text-indent: -9999px;
 	}
 
 	.slick-next,

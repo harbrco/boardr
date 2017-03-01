@@ -73,11 +73,54 @@
 
 
 
-		// Hero Scripts
-		var heroSlider = $('.hero-slider');
+		// Header & Hero Scripts
 		var headerWrapper = $('.header-wrapper');
 
+		var submenuSizeCalc = function(){
+			$('.header .menu-desktop ul.submenu').css('top', headerHeight);
+		};
+		submenuSizeCalc();
+
+		var searchResultsSizeCalc = function(){
+			$('.search-results, .search-results inner').css('height', vpHeight - headerHeight);
+			$('.search-results').css('top', headerHeight);
+		};
+		searchResultsSizeCalc();
+
+		$(window).resize(function() {
+			submenuSizeCalc();
+			searchResultsSizeCalc();
+		}).resize();
+
+
+		// Desktop Header Search
+		var searchLink = $('.search-link a');
+		$('body').on('click', '.search-toggle', function(e){
+			e.preventDefault();
+			$('body').toggleClass('noScroll').toggleClass('searchOpen');
+			searchLink.toggleClass('open-search close-search');
+			$('.header-search-bar, .search-results').toggleClass('isActive');
+
+			if (searchLink.text() === searchLink.data("text-swap")) {
+				searchLink.text(searchLink.data("text-original"));
+			} else {
+				searchLink.data("text-original", searchLink.text());
+				searchLink.text(searchLink.data("text-swap"));
+			}
+
+			$('.header-search-bar input').focus();
+		});
+
+		$('body').on('click', '.close-search', function(e){
+			e.preventDefault();
+			$('.header-search-bar input').val('');
+		});
+
+
+		var heroSlider = $('.hero-slider');
+
 		if ( heroSlider.length >= 1 ) {
+		// If there's a hero slider on the page...
 			// Hero Slider
 			// heroSlider.on('init', function(){
 			// 	var thisSlider = $(this);
@@ -124,7 +167,11 @@
 			headerWrapper.mouseenter(function() {
 				headerHeroTop.addClass('hasBackground');
 			}).mouseleave(function() {
-				headerHeroTop.removeClass('hasBackground');
+				if ( $('body').hasClass('searchOpen') ) {
+					// don't remove header class 'hasBackground'
+				} else {
+					headerHeroTop.removeClass('hasBackground');
+				}
 			});
 
 
@@ -151,8 +198,10 @@
 				offset: -10
 			});
 
+
 		} else {
-			// NO HERO on page - add top padding to middle-wrapper to push content down.
+		// NO HERO on page - add top padding to middle-wrapper to push content down.
+
 			var headerSpacingCalc = function(){
 				$('.middle-wrapper').css('padding-top', headerHeight);
 			};
@@ -162,6 +211,7 @@
 				headerSpacingCalc();
 			}).resize();
 		}
+
 
 		// Header appear disappear when scrolling down and up on page
 		var headerAppearBuffer;
@@ -181,6 +231,38 @@
 			}
 			lastScrollTop = st;
 		});
+
+
+
+		// Content Module Sliders
+		var cardCarousel = $('.card-carousel .card-list');
+
+		if ( cardCarousel.length >= 1 ) {
+			cardCarousel.slick({
+				dots: false,
+				infinite: true,
+				draggable: false,
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				appendArrows: '.slider-arrows .inner',
+				responsive: [
+					{
+						breakpoint: 1280,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+					breakpoint: 768,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+					}
+				]
+			});
+		}
 
 
 

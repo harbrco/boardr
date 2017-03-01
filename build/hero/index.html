@@ -5,26 +5,99 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+		<!-- Use title if it's in the page YAML frontmatter -->
+		<title>Hero</title>
+
 		<!-- FONTS -->
 		<script src="https://use.typekit.net/byn3uae.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-		<!-- Use title if it's in the page YAML frontmatter -->
-		<title>Hero</title>
-
 		<link href="/css/min/site-min.css" rel="stylesheet" />
+		<link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 		<!-- Slick Slider Styles -->
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
+		<!-- modernizr for mobile menu -->
+		<script src="/js/mobile-menu-js/modernizr.custom.js"></script>
 	</head>
 
 	<body>
-		<div class="header-outer wrapper">
+		<div class="site-wrap">
+			<!-- Mobile Menu Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
+				<!-- mp-menu -->
+<nav id="mp-menu" class="mp-menu">
+	<div class="mp-level">
+		<div class="inner" style="overflow-x: hidden; overflow-y: scroll; position: absolute; width: 100%; height: 100%;">
+			<a class="mp-back close-menu" href="#">Close</a>
+
+			<ul>
+				<li class="hasChildMenu">
+					<a href="#">Shop</a>
+					<div class="mp-level">
+						<div class="inner" style="overflow-x: hidden; overflow-y: scroll; position: fixed; width: 100%; height: 100%;">
+							<a class="mp-back" href="#">back</a>
+							<h3><a href="/shop">Shop</a></h3>
+							<ul>
+								<li><a href="#">Cart/Checkout</a></li>
+								<li><a href="#">Collections</a></li>
+								<li><a href="#">Shoes</a></li>
+
+								<li class="hasChildMenu">
+									<a class="icon icon-phone" href="#">Top Shoe Brands</a>
+									<div class="mp-level">
+										<a class="mp-back" href="#">back</a>
+										<h3><a href="/shop/">Top Shoe Brands</a></h3>
+										<ul>
+											<li><a href="#">Browse All</a></li>
+											<li><a href="#">Adidas Shoes</a></li>
+											<li><a href="#">Vans Shoes</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li class="hasChildMenu">
+					<a href="#">Skaters</a>
+					<div class="mp-level">
+						<div class="inner" style="overflow-x: hidden; overflow-y: scroll; position: fixed; width: 100%; height: 100%;">
+							<a class="mp-back" href="#">back</a>
+							<h3><a href="/skaters">Skaters</a></h3>
+							<ul>
+								<li><a href="#">Global Ranks</a></li>
+								<li><a href="#">Ranks: Ups &amp; Downs</a></li>
+								<li><a href="#">Instagram Ranks</a></li>
+								<li><a href="#">Youtube Ranks</a></li>
+								<li><a href="#">Skater Database</a></li>
+								<li><a href="#">Skate Videos</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li><a href="#">Events</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="/search">Search</a></li><!-- We should probably just link to a main search page for mobile devices -->
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- /mp-menu -->
+			</div>
+
+			<div class="header-outer wrapper">
 	<div class="header-wrapper wrapper isWhite">
 		<header class="header" role="banner">
 			<div class="inner container--full">
 				<div class="logo"><a href="/"></a></div>
+
+				<div class="mobile-menu-toggle">
+					<a href="#" id="menu-toggle" class="menu-trigger">Menu</a>
+				</div>
 
 				<nav class="menu menu-desktop" role="navigation">
 					<ul>
@@ -55,17 +128,199 @@
 					</ul>
 				</nav>
 
+				<div class="header-search-bar">
+					<form>
+						<div class="ais-search-box"><input type="text" id="search-box" name="q" placeholder="Search profiles, products, events, articles, photos..." autocapitalize="off" autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" value="" class="ais-search-box--input"></div>
+					</form>
+				</div>
+
 				<div class="search-link search-toggle">
-					<a href="">Search</a>
+					<a href="#" data-text-swap="Cancel" data-text-original="Search" class="open-search">Search</a>
 				</div>
 			</div>
 		</header>
 	</div>
 </div><!-- /.header-outer -->
 
+
+<div class="search-results wrapper bgIsDark isBlack">
+	<div class="inner container well--s">
+
+		<div id="stats-container">
+			<div data-reactroot="" class="ais-root ais-stats">
+				<div class="ais-body ais-stats--body">
+					<div>1,238 results <span class="ais-stats--time">found in 6ms</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="hits" class="grid-group gutter--l row_of_2 hasRows well--s">
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Get_Rad_for_Ray_-_Scotty_Eats"><img src="https://theboardr.blob.core.windows.net/photos/8430_600.jpg" alt="Scotty Conley aka The Body in Get Rad for Ray - Scotty Eats Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Get_Rad_for_Ray_-_Scotty_Eats">Scotty Conley aka The Body in Get Rad for Ray - Scotty Eats Photo</a></h2>
+						<p>Scotty tests out the chili dogs wherever we go.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Paul_Zitzer_Poser_of_the_Month_in_Shanghai"><img src="https://theboardr.blob.core.windows.net/photos/199_600.jpg" alt="James Craig in Paul Zitzer Poser of the Month in Shanghai Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Paul_Zitzer_Poser_of_the_Month_in_Shanghai">James Craig in Paul Zitzer Poser of the Month in Shanghai Photo</a></h2>
+						<p>Zitzer tests the low ledge with a Poser of the Month while James Craig is on cheerleader duty.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Wear_Testing_at_the_adidas_Offices_in_Portland"><img src="https://theboardr.blob.core.windows.net/photos/1053_600.jpg" alt="Wear Testing at the adidas Offices in Portland Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Wear_Testing_at_the_adidas_Offices_in_Portland">Wear Testing at the adidas Offices in Portland Photo</a></h2>
+						<p>We're at the wear testing department right now.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/The_Boardr_Am_at_Tampa_-_Marinela_Grip"><img src="https://theboardr.blob.core.windows.net/photos/8294_600.jpg" alt="The Boardr Am at Tampa - Marinela Grip Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/The_Boardr_Am_at_Tampa_-_Marinela_Grip">The Boardr Am at Tampa - Marinela Grip Photo</a></h2>
+						<p>Marinela grip tape being put to the test.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/profile/3670/Eric_Testerman"><img src="https://theboardr.blob.core.windows.net/headshots/3670.jpg" alt="Eric Testerman Profile Bio" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Profile: <a href="https://theboardr.com/profile/3670/Eric_Testerman">Eric Testerman Profile Bio</a></h2>
+						<p>Photos, videos, and more info on Eric Testerman from Eustis FL. </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Get_Rad_for_Ray_-_Scotty_Eats"><img src="https://theboardr.blob.core.windows.net/photos/8430_600.jpg" alt="Scotty Conley aka The Body in Get Rad for Ray - Scotty Eats Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Get_Rad_for_Ray_-_Scotty_Eats">Scotty Conley aka The Body in Get Rad for Ray - Scotty Eats Photo</a></h2>
+						<p>Scotty tests out the chili dogs wherever we go.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/The_Boardr_Am_at_Tampa_-_Marinela_Grip"><img src="https://theboardr.blob.core.windows.net/photos/8294_600.jpg" alt="The Boardr Am at Tampa - Marinela Grip Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/The_Boardr_Am_at_Tampa_-_Marinela_Grip">The Boardr Am at Tampa - Marinela Grip Photo</a></h2>
+						<p>Marinela grip tape being put to the test.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Wear_Testing_at_the_adidas_Offices_in_Portland"><img src="https://theboardr.blob.core.windows.net/photos/1053_600.jpg" alt="Wear Testing at the adidas Offices in Portland Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Wear_Testing_at_the_adidas_Offices_in_Portland">Wear Testing at the adidas Offices in Portland Photo</a></h2>
+						<p>We're at the wear testing department right now.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Paul_Zitzer_Poser_of_the_Month_in_Shanghai"><img src="https://theboardr.blob.core.windows.net/photos/199_600.jpg" alt="James Craig in Paul Zitzer Poser of the Month in Shanghai Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Paul_Zitzer_Poser_of_the_Month_in_Shanghai">James Craig in Paul Zitzer Poser of the Month in Shanghai Photo</a></h2>
+						<p>Zitzer tests the low ledge with a Poser of the Month while James Craig is on cheerleader duty.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/profile/3670/Eric_Testerman"><img src="https://theboardr.blob.core.windows.net/headshots/3670.jpg" alt="Eric Testerman Profile Bio" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Profile: <a href="https://theboardr.com/profile/3670/Eric_Testerman">Eric Testerman Profile Bio</a></h2>
+						<p>Photos, videos, and more info on Eric Testerman from Eustis FL. </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Get_Rad_for_Ray_-_Scotty_Eats"><img src="https://theboardr.blob.core.windows.net/photos/8430_600.jpg" alt="Scotty Conley aka The Body in Get Rad for Ray - Scotty Eats Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Get_Rad_for_Ray_-_Scotty_Eats">Scotty Conley aka The Body in Get Rad for Ray - Scotty Eats Photo</a></h2>
+						<p>Scotty tests out the chili dogs wherever we go.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_1_of_2">
+				<div class="inner grid-group gutter--m">
+					<div class="search-result-img col span_4_of_10">
+						<a href="https://theboardr.com/photo/Wear_Testing_at_the_adidas_Offices_in_Portland"><img src="https://theboardr.blob.core.windows.net/photos/1053_600.jpg" alt="Wear Testing at the adidas Offices in Portland Photo" class="img-rounded" style="max-height: 200px;"></a>
+					</div>
+					<div class="search-result-text col span_6_of_10">
+						<h2 class="hit-name">Photo: <a href="https://theboardr.com/photo/Wear_Testing_at_the_adidas_Offices_in_Portland">Wear Testing at the adidas Offices in Portland Photo</a></h2>
+						<p>We're at the wear testing department right now.</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- /#hits -->
+
+		<div id="pages" class="well--s">
+			<ul data-reactroot="" class="ais-pagination">
+				<li class="ais-pagination--item pagination ais-pagination--item__first ais-pagination--item__disabled"><span class="ais-pagination--link fa fa-angle-double-left"></span></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__previous ais-pagination--item__disabled"><span class="ais-pagination--link fa fa-angle-left"></span></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__page ais-pagination--item__active"><a class="ais-pagination--link" aria-label="1" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=0">1</a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__page"><a class="ais-pagination--link" aria-label="2" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=1">2</a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__page"><a class="ais-pagination--link" aria-label="3" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=2">3</a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__page"><a class="ais-pagination--link" aria-label="4" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=3">4</a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__page"><a class="ais-pagination--link" aria-label="5" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=4">5</a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__page"><a class="ais-pagination--link" aria-label="6" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=5">6</a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__page"><a class="ais-pagination--link" aria-label="7" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=6">7</a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__next"><a class="ais-pagination--link" aria-label="Next" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=1"><span class="fa fa-angle-right"></span></a></li>
+				<li class="ais-pagination--item pagination ais-pagination--item__last"><a class="ais-pagination--link" aria-label="Last" href="https://theboardr.com/testsearch?q=test&amp;hPP=5&amp;idx=BoardrData&amp;p=49"><span class="fa fa-angle-double-right"></span></a></li>
+			</ul>
+		</div><!-- /#pages -->
+	</div>
+</div>
+
 <div class="middle-wrapper">
 
-		<div class="hero-wrapper wrapper">
+			<div class="hero-wrapper wrapper">
 	<div class="hero hero-slider wrapper">
 		<div class="hero-slide fullVP hasOverlay" style="background-image: url('/img/hero-1.jpg');">
 			<div class="overlay"></div>
@@ -73,7 +328,7 @@
 				<h3>Freshly Dropped</h3>
 				<h2>The Hupper 2 Lo</h2>
 				<div class="center-btns btn-row">
-					<a href="#" class="btn">Shop Now</a>
+					<a href="#" class="btn btn--noOutlineHover">Shop Now</a>
 				</div>
 			</div>
 		</div>
@@ -84,7 +339,7 @@
 				<h3>Look Here</h3>
 				<h2>Second Hero Slide</h2>
 				<div class="center-btns btn-row">
-					<a href="#" class="btn">Test</a> <a href="#" class="btn btn--outline">Other Button</a>
+					<a href="#" class="btn btn--noOutlineHover">Test</a>
 				</div>
 			</div>
 		</div>
@@ -155,26 +410,26 @@
 	</div>
 </div>
 
-		</div><!-- /.middle-wrapper -->
+			</div><!-- /.middle-wrapper -->
 
 <div class="footer-wrapper wrapper isBlack bgIsDark">
 	<footer class="footer container--l well--s" role="contentinfo">
-		<div class="footer-columns grid-group gutter--none">
-			<div class="footer-links footer-right col span_6_of_11 well--s">
-				<div class="inner grid-group gutter--m row_of_2--tablet hasRows--tablet">
-					<ul class="col span_1_of_3 tablet_1_of_2">
+		<div class="footer-columns grid-group gutter--none row_of_2--tablet hasRows--tablet row_of_1--mobile hasRows--mobile">
+			<div class="footer-links footer-right col span_6_of_11 tablet_full_span mobile_full_span well--s">
+				<div class="inner grid-group gutter--m">
+					<ul class="col span_1_of_3">
 						<li><a href="#">About Us</a></li>
 						<li><a href="#">The Boarder Am</a></li>
 						<li><a href="#">Skate Nerd</a></li>
 						<li><a href="#">Contest Results</a></li>
 					</ul>
-					<ul class="col span_1_of_3 tablet_1_of_2">
+					<ul class="col span_1_of_3">
 						<li><a href="#">Help</a></li>
 						<li><a href="#">Shipping &amp; Returns</a></li>
 						<li><a href="#">The Shop</a></li>
 						<li><a href="#">Privacy Policy</a></li>
 					</ul>
-					<ul class="col span_1_of_3 tablet_1_of_2">
+					<ul class="col span_1_of_3">
 						<li><a href="#">Events</a></li>
 						<li><a href="#">Skater Database</a></li>
 						<li><a href="#">Global Ranks</a></li>
@@ -183,33 +438,33 @@
 				</div>
 			</div>
 
-			<div class="footer-info footer-left col span_5_of_11 well--s">
-				<div class="footer-info-top grid-group gutter--m hasRows--tablet">
-					<div class="footer-address col span_1_of_2 tablet_full_span">
+			<div class="footer-info footer-left col span_5_of_11 tablet_full_span mobile_full_span well--s">
+				<div class="footer-info-top grid-group gutter--m">
+					<div class="footer-address col span_1_of_2">
 						<h3>The Boardr HQ</h3>
 						<p>4611 North Hale Avenue<br />
 						Tampa, Florida 33614</p>
-						<p><a href="tel:+18138767677">(813) 876 - 7677</a></p>
+						<p><a href="tel:+18138767677"><span class="noWrap">(813) 876 - 7677</span></a></p>
 						<p>Monday - Saturday: <span class="noWrap">11am to 6pm</span></p>
 					</div>
 
-					<div class="footer-address col span_1_of_2 tablet_full_span">
+					<div class="footer-address col span_1_of_2">
 						<h3>The Boardr Gainesville</h3>
 						<p>17 West University Avenue<br />
 						Gainesville, Florida 32601</p>
-						<p><a href="tel:+13522245851">(352) 224 - 5851</a></p>
+						<p><a href="tel:+13522245851"><span class="noWrap">(352) 224 - 5851</span></a></p>
 						<p>Monday - Saturday: <span class="noWrap">12pm to 8pm</span></p>
 					</div>
 				</div>
 
 				<div class="footer-social">
 					<ul>
-						<li><a href="#"><span class="fa fa-youtube"></span></a></li>
+						<li><a href="#"><span class="fa fa-youtube-play"></span></a></li>
 						<li><a href="#"><span class="fa fa-instagram"></span></a></li>
 						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
 						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-snapchat"></span></a></li>
-						<li><a href="#"><span class="fa fa-googleplus"></span></a></li>
+						<li><a href="#"><span class="fa fa-snapchat-ghost"></span></a></li>
+						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
 						<li><a href="#"><span class="fa fa-tumblr"></span></a></li>
 					</ul>
 				</div>
@@ -217,9 +472,19 @@
 		</div>
 	</footer>
 </div><!-- /.footer-wrapper -->
+		</div>
 
 		<script src="/js/libs/jquery.js"></script>
 		<script src="/js/min/site-min.js"></script>
+
+		<!-- mobile menu script dependencies -->
+		<script src="/js/mobile-menu-js/classie.js"></script>
+		<script src="/js/mobile-menu-js/mlpushmenu.js"></script>
+		<script>
+			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'menu-toggle' ), {
+				type : 'cover'
+			} );
+		</script>
 
 		<!-- Slick Slider Scripts -->
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>

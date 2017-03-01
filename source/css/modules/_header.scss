@@ -1,6 +1,6 @@
 .header-outer {
 	position: fixed;
-	z-index: 90;
+	z-index: 9;
 	transition: transform 0.2s cubic-bezier(0.340, 0.070, 0.095, 0.995);
 
 	&.headerHidden {
@@ -55,14 +55,16 @@
 				}
 			}
 
-			.search-link {
+			.search-link,
+			.mobile-menu-toggle {
 				a {
 					color: $black;
 				}
 			}
 
 			.menu-desktop,
-			.search-link {
+			.search-link,
+			.mobile-menu-toggle {
 				a {
 					border-bottom: 1px solid rgba($black, 0);
 
@@ -103,14 +105,16 @@
 				}
 			}
 
-			.search-link {
+			.search-link,
+			.mobile-menu-toggle {
 				a {
 					color: $white;
 				}
 			}
 
 			.menu-desktop,
-			.search-link {
+			.search-link,
+			.mobile-menu-toggle {
 				a {
 					border-bottom: 1px solid rgba($white, 0);
 
@@ -167,14 +171,16 @@
 					}
 				}
 
-				.search-link {
+				.search-link,
+				.mobile-menu-toggle {
 					a {
 						color: $black;
 					}
 				}
 
 				.menu-desktop,
-				.search-link {
+				.search-link,
+				.mobile-menu-toggle {
 					a {
 						border-bottom: 1px solid rgba($black, 0);
 
@@ -205,7 +211,7 @@
 		background-image: url('../../img/logo-blk@2x.png');
 		background-size: 136px 19px;
 		background-repeat: no-repeat;
-		margin-right: 24px;
+		margin-right: 34px;
 		margin-top: 42px;
 		vertical-align: top;
 		@extend %hoverTrans;
@@ -219,8 +225,20 @@
 		}
 	}
 
+	.mobile-menu-toggle {
+		@extend %sansLt;
+		display: none;
+		vertical-align: top;
+		text-align: right;
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 2px;
+		padding: 27px 0;
+		float: right;
+	}
+
 	.menu-desktop {
-		width: calc(100% - 310px);
+		width: calc(100% - 300px);
 		display: inline-block;
 		vertical-align: top;
 
@@ -234,7 +252,7 @@
 				font-size: 20px;
 				line-height: 22px;
 				letter-spacing: 2px;
-				padding: 38px 0;
+				padding: 37px 0;
 
 				&:last-child {
 					margin-right: 0;
@@ -252,7 +270,7 @@
 
 		ul.submenu {
 			position: absolute;
-			top: 100px;
+			//top: 100px;
 			left: 0;
 			width: 100%;
 			background-color: $black;
@@ -290,7 +308,7 @@
 		font-size: 20px;
 		line-height: 22px;
 		letter-spacing: 2px;
-		padding: 38px 0;
+		padding: 37px 0;
 		float: right;
 
 		a {
@@ -299,7 +317,8 @@
 	}
 
 	.menu-desktop,
-	.search-link {
+	.search-link,
+	.mobile-menu-toggle {
 		a {
 			display: block;
 			border-bottom: 1px solid $white;
@@ -311,9 +330,200 @@
 			}
 		}
 	}
+
+	.header-search-bar {
+		background-color: $white;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		width: calc(100% - 426px);
+		padding-top: 25px;
+		pointer-events: none;
+		opacity: 0;
+		@extend %hoverTrans;
+
+		input {
+			width: 100%;
+			height: 46px;
+			font-size: 20px;
+			line-height: 24px;
+			letter-spacing: 2px;
+			text-align: center;
+			padding: 0;
+			border: none;
+		}
+
+		&.isActive {
+			pointer-events: auto;
+			opacity: 1;
+		}
+	}
+}
+
+.search-results {
+	position: fixed;
+	overflow-y: scroll;
+	z-index: 20;
+	opacity: 0;
+	pointer-events: none;
+	@extend %hoverTrans;
+
+	&.isActive {
+		pointer-events: auto;
+		opacity: 1;
+	}
+
+	#stats-container {
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.search-result-img {
+		img {
+			@extend %hoverTrans;
+
+			&:hover {
+				@include hoverFade(0.6);
+			}
+		}
+	}
+
+	.search-result-text {
+		a {
+			color: $white;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	#pages {
+		ul {
+			text-align: center;
+
+			li {
+				font-size: 20px;
+				line-height: 22px;
+				display: inline-block;
+				margin-right: 20px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				a {
+					color: $white;
+
+					&:hover {
+						color: $primary;
+					}
+				}
+			}
+		}
+
+		.ais-pagination--item__first {
+			margin-right: 12px;
+		}
+		.ais-pagination--item__previous {
+			margin-right: 26px;
+		}
+		.ais-pagination--item__next {
+			margin-left: 6px;
+			margin-right: 12px;
+		}
+		.ais-pagination--item__last {
+			margin-right: 0;
+		}
+
+		.ais-pagination--item__active {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
 }
 
 
 
 // HEADER BREAKPOINTS = = = = = = =
+@media only screen and (max-width:1140px) {
+	.header {
+		.logo {
+			margin-top: 40px;
+		}
 
+		.menu-desktop {
+			ul {
+				li {
+					margin-right: 50px;
+					font-size: 18px;
+					line-height: 20px;
+				}
+			}
+		}
+
+		.search-link {
+			font-size: 18px;
+			line-height: 20px;
+		}
+
+		.header-search-bar {
+			transform: translateX(-45%);
+			padding-top: 24px;
+
+			input {
+				font-size: 18px;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:1024px) {
+	.header {
+		.header-search-bar {
+			input {
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:900px) {
+	.header {
+		.logo {
+			margin-top: 30px;
+		}
+
+		.mobile-menu-toggle {
+			display: inline-block;
+		}
+
+		.menu-desktop,
+		.search-link {
+			display: none;
+		}
+
+		.header-search-bar {
+			display: none;
+		}
+	}
+
+	.search-results {
+		display: none;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.header {
+		.logo {
+			margin-top: 23px;
+		}
+
+		.mobile-menu-toggle {
+			padding: 20px 0;
+		}
+	}
+}

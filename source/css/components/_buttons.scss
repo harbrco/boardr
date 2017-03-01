@@ -14,7 +14,7 @@
 
 .btn-grid {
 	.btn {
-		width: calc(100% - 12px);
+		width: calc(100% - 14px);
 		display: block;
 		padding-left: 6px;
 		padding-right: 6px;
@@ -44,21 +44,24 @@
 	&:hover {
 		color: $black;
 		background-color: $white;
+		box-shadow: inset 0px 0px 0px 1px $black;
 
 		&.btn--primary {
 			color: $primary;
 			background-color: $white;
+			box-shadow: inset 0px 0px 0px 1px $primary;
 		}
 
 		&.btn--secondary {
 			color: $secondary;
 			background-color: $white;
+			box-shadow: inset 0px 0px 0px 1px $secondary;
 		}
 	}
 
-	&.btn--outlineHover {
+	&.btn--noOutlineHover {
 		&:hover {
-			box-shadow: inset 0px 0px 0px 1px $black;
+			box-shadow: none;
 		}
 	}
 

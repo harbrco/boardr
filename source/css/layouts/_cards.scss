@@ -41,3 +41,43 @@
 		}
 	}
 }
+
+.card-carousel-wrapper {
+	.card-carousel {
+		padding: 0 80px;
+
+		.card {
+			padding: 0 20px;
+		}
+
+		.card-text {
+			margin-bottom: 0;
+		}
+	}
+
+	.slider-arrows {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(calc(-50% - 45px));
+
+		.slick-next,
+		.slick-prev {
+			position: absolute;
+		}
+		.slick-next {
+			right: 0;
+		}
+		.slick-prev {
+			left: 0;
+		}
+	}
+}
+
+@media only screen and (max-width:1440px) {
+	.card-carousel-wrapper {
+		.card-carousel {
+			padding: 0 60px;
+		}
+	}
+}

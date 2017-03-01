@@ -20,6 +20,16 @@ body {
 	padding: 0;
 	margin: 0;
 	-webkit-touch-callout: none !important;
+
+	//overflow-x: hidden; // needed for mobile menu
+
+	&.noScroll {
+		overflow: hidden;
+	}
+}
+
+.site-wrap {
+	// this element is for mobile menu positioning
 }
 
 img {
