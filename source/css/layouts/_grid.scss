@@ -43,8 +43,8 @@ $baseFS: 16px;  // <-- Change this if needed
 // Change the gutter values based on grid designs
 $gutterBase: 2.5%;
 $gutterNone: 0%;
-$gutterMed: 5%;
-$gutterLarge: 7%;
+$gutterMed: 7%;
+$gutterLarge: 10%;
 
 
 .gutter {
@@ -54,23 +54,24 @@ $gutterLarge: 7%;
 		$span: $cols;
 		@while $span > 0 {
 			@if ($span == $cols) {
-				> .span_#{$span}_of_#{$cols} { width: 100%; }
+				.span_#{$span}_of_#{$cols} { width: 100%; }
 			} @else {
-				> .span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
+				.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
 			}
 			$span: $span - 1;
 		}
 	}
 
-	> .col {
+	.col {
 		margin-left: $gutter;
 	}
 
 	&.hasRows {
 		.col {
 			margin-top: $gutter;
+			margin-bottom: 0;
 		}
-
+		&.row_of_1 .col:first-child { margin-top: 0; }
 		&.row_of_2 .col:nth-child(-n+2) { margin-top: 0; }
 		&.row_of_3 .col:nth-child(-n+3) { margin-top: 0; }
 		&.row_of_4 .col:nth-child(-n+4) { margin-top: 0; }
@@ -86,22 +87,29 @@ $gutterLarge: 7%;
 		$span: $cols;
 		@while $span > 0 {
 			@if ($span == $cols) {
-				> .span_#{$span}_of_#{$cols} { width: 100%; }
+				.span_#{$span}_of_#{$cols} { width: 100%; }
 			} @else {
-				> .span_#{$span}_of_#{$cols} { width: decimal-round((100 * $span/$cols), 2, 'floor') * 1%; }
+				.span_#{$span}_of_#{$cols} { width: decimal-round((100 * $span/$cols), 2, 'floor') * 1%; }
 			}
 			$span: $span - 1;
 		}
 	}
 
-	> .col {
+	.col {
 		margin-left: 0;
 	}
 
 	&.hasRows {
 		.col {
 			margin-top: $gutter;
+			margin-bottom: 0;
 		}
+		&.row_of_1 .col:first-child { margin-top: 0; }
+		&.row_of_2 .col:nth-child(-n+2) { margin-top: 0; }
+		&.row_of_3 .col:nth-child(-n+3) { margin-top: 0; }
+		&.row_of_4 .col:nth-child(-n+4) { margin-top: 0; }
+		&.row_of_5 .col:nth-child(-n+5) { margin-top: 0; }
+		&.row_of_6 .col:nth-child(-n+6) { margin-top: 0; }
 	}
 }
 
@@ -112,23 +120,24 @@ $gutterLarge: 7%;
 		$span: $cols;
 		@while $span > 0 {
 			@if ($span == $cols) {
-				> .span_#{$span}_of_#{$cols} { width: 100%; }
+				.span_#{$span}_of_#{$cols} { width: 100%; }
 			} @else {
-				> .span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
+				.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
 			}
 			$span: $span - 1;
 		}
 	}
 
-	> .col {
+	.col {
 		margin-left: $gutter;
 	}
 
 	&.hasRows {
 		.col {
 			margin-top: $gutter;
+			margin-bottom: 0;
 		}
-
+		&.row_of_1 .col:first-child { margin-top: 0; }
 		&.row_of_2 .col:nth-child(-n+2) { margin-top: 0; }
 		&.row_of_3 .col:nth-child(-n+3) { margin-top: 0; }
 		&.row_of_4 .col:nth-child(-n+4) { margin-top: 0; }
@@ -136,7 +145,6 @@ $gutterLarge: 7%;
 		&.row_of_6 .col:nth-child(-n+6) { margin-top: 0; }
 	}
 }
-
 .gutter--m {
 	$gutter: $gutterMed;
 
@@ -144,23 +152,24 @@ $gutterLarge: 7%;
 		$span: $cols;
 		@while $span > 0 {
 			@if ($span == $cols) {
-				> .span_#{$span}_of_#{$cols} { width: 100%; }
+				.span_#{$span}_of_#{$cols} { width: 100%; }
 			} @else {
-				> .span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
+				.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
 			}
 			$span: $span - 1;
 		}
 	}
 
-	> .col {
+	.col {
 		margin-left: $gutter;
 	}
 
 	&.hasRows {
 		.col {
 			margin-top: $gutter;
+			margin-bottom: 0;
 		}
-
+		&.row_of_1 .col:first-child { margin-top: 0; }
 		&.row_of_2 .col:nth-child(-n+2) { margin-top: 0; }
 		&.row_of_3 .col:nth-child(-n+3) { margin-top: 0; }
 		&.row_of_4 .col:nth-child(-n+4) { margin-top: 0; }
@@ -182,11 +191,24 @@ $gutterLarge: 7%;
 	&:after { content:""; display:table; }
 	&:after { clear:both;}
 
-	&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-	&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-	&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-	&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-	&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
+	&.row_of_1 .col {
+		margin-left: 0;
+	}
+	&.row_of_2 .col:nth-child(2n+1) {
+		margin-left: 0;
+	}
+	&.row_of_3 .col:nth-child(3n+1) {
+		margin-left: 0;
+	}
+	&.row_of_4 .col:nth-child(4n+1) {
+		margin-left: 0;
+	}
+	&.row_of_5 .col:nth-child(5n+1) {
+		margin-left: 0;
+	}
+	&.row_of_6 .col:nth-child(6n+1) {
+		margin-left: 0;
+	}
 }
 
 .col {
@@ -207,6 +229,8 @@ $gutterLarge: 7%;
 	vertical-align: bottom;
 }
 
+// For responsive re-structuring, refer to: http://www.responsivegridsystem.com/going-further/
+
 
 
 @media only screen and (max-width:900px) {
@@ -218,33 +242,102 @@ $gutterLarge: 7%;
 	$gutterLarge: 10%;
 
 
-	.grid-group {
-		&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
-	}
-
-
 	.gutter {
 		$gutter: $gutterBase;
 
-		&.row_of_2 .col { margin-left: $gutter; }
-		&.row_of_3 .col { margin-left: $gutter; }
-		&.row_of_4 .col { margin-left: $gutter; }
-		&.row_of_5 .col { margin-left: $gutter; }
-		&.row_of_6 .col { margin-left: $gutter; }
+		&.hasRows,
+		&.hasRows--tablet {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--tablet {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
 
 		@for $cols from 2 through 12 {
 			$span: $cols;
 			@while $span > 0 {
 				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.tablet_#{$span}_of_#{$cols} { width: 100% !important; }
+					.tablet_#{$span}_of_#{$cols} { width: 100%; }
 				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
-					.tablet_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
+					.tablet_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
 				}
 				$span: $span - 1;
 			}
@@ -257,120 +350,104 @@ $gutterLarge: 7%;
 				margin-left: 0;
 			}
 		}
-
-		&.hasRows {
-			.col {
-				margin-top: $gutter;
-			}
-
-			&.row_of_2 .col:nth-child(-n+2) { margin-top: 0; }
-			&.row_of_3 .col:nth-child(-n+3) { margin-top: 0; }
-			&.row_of_4 .col:nth-child(-n+4) { margin-top: 0; }
-			&.row_of_5 .col:nth-child(-n+5) { margin-top: 0; }
-			&.row_of_6 .col:nth-child(-n+6) { margin-top: 0; }
-		}
-
-		&.hasRows--tablet {
-			.col {
-				margin-top: $gutter;
-			}
-
-			&.hasRows {
-				&.row_of_2 .col:nth-child(-n+2) { margin-top: $gutter; }
-				&.row_of_3 .col:nth-child(-n+3) { margin-top: $gutter; }
-				&.row_of_4 .col:nth-child(-n+4) { margin-top: $gutter; }
-				&.row_of_5 .col:nth-child(-n+5) { margin-top: $gutter; }
-				&.row_of_6 .col:nth-child(-n+6) { margin-top: $gutter; }
-			}
-
-			&.row_of_2--tablet .col:nth-child(-n+2) { margin-top: 0 !important; }
-			&.row_of_3--tablet .col:nth-child(-n+3) { margin-top: 0 !important; }
-			&.row_of_4--tablet .col:nth-child(-n+4) { margin-top: 0 !important; }
-			&.row_of_5--tablet .col:nth-child(-n+5) { margin-top: 0 !important; }
-			&.row_of_6--tablet .col:nth-child(-n+6) { margin-top: 0 !important; }
-		}
-
-		.tablet_full_span {
-			width: 100%;
-			margin-left: 0;
-		}
-
-		&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
-
-		&.row_of_2--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(2n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_3--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(3n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_4--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(4n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_5--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(5n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_6--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(6n+1) { margin-left: 0 !important; }
-		}
 	}
-
 
 	.gutter--none {
 		$gutter: $gutterNone;
 
-		&.row_of_2 .col { margin-left: $gutter !important; }
-		&.row_of_3 .col { margin-left: $gutter !important; }
-		&.row_of_4 .col { margin-left: $gutter !important; }
-		&.row_of_5 .col { margin-left: $gutter !important; }
-		&.row_of_6 .col { margin-left: $gutter !important; }
+		&.hasRows,
+		&.hasRows--tablet {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--tablet {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
 
 		@for $cols from 2 through 12 {
 			$span: $cols;
 			@while $span > 0 {
 				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.tablet_#{$span}_of_#{$cols} { width: 100% !important; }
+					.tablet_#{$span}_of_#{$cols} { width: 100%; }
 				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round((100 * $span/$cols), 2, 'floor') * 1%; }
-					.tablet_#{$span}_of_#{$cols} { width: decimal-round((100 * $span/$cols), 2, 'floor') * 1% !important; }
+					.tablet_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
 				}
 				$span: $span - 1;
 			}
@@ -383,44 +460,104 @@ $gutterLarge: 7%;
 				margin-left: 0;
 			}
 		}
-
-		&.hasRows {
-			.col {
-				margin-top: $gutter;
-			}
-		}
-
-		&.hasRows--tablet {
-			.col {
-				margin-top: $gutter;
-			}
-		}
-
-		.tablet_full_span {
-			width: 100%;
-			margin-left: 0;
-		}
 	}
-
 
 	.gutter--l {
 		$gutter: $gutterLarge;
 
-		&.row_of_2 .col { margin-left: $gutter; }
-		&.row_of_3 .col { margin-left: $gutter; }
-		&.row_of_4 .col { margin-left: $gutter; }
-		&.row_of_5 .col { margin-left: $gutter; }
-		&.row_of_6 .col { margin-left: $gutter; }
+		&.hasRows,
+		&.hasRows--tablet {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--tablet {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
 
 		@for $cols from 2 through 12 {
 			$span: $cols;
 			@while $span > 0 {
 				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.tablet_#{$span}_of_#{$cols} { width: 100% !important; }
+					.tablet_#{$span}_of_#{$cols} { width: 100%; }
 				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
-					.tablet_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
+					.tablet_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
 				}
 				$span: $span - 1;
 			}
@@ -433,114 +570,103 @@ $gutterLarge: 7%;
 				margin-left: 0;
 			}
 		}
-
-		&.hasRows {
-			.col {
-				margin-top: $gutter;
-			}
-		}
-
-		&.hasRows--tablet {
-			.col {
-				margin-top: $gutter;
-			}
-
-			&.hasRows {
-				&.row_of_2 .col:nth-child(-n+2) { margin-top: $gutter; }
-				&.row_of_3 .col:nth-child(-n+3) { margin-top: $gutter; }
-				&.row_of_4 .col:nth-child(-n+4) { margin-top: $gutter; }
-				&.row_of_5 .col:nth-child(-n+5) { margin-top: $gutter; }
-				&.row_of_6 .col:nth-child(-n+6) { margin-top: $gutter; }
-			}
-
-			&.row_of_2--tablet .col:nth-child(-n+2) { margin-top: 0 !important; }
-			&.row_of_3--tablet .col:nth-child(-n+3) { margin-top: 0 !important; }
-			&.row_of_4--tablet .col:nth-child(-n+4) { margin-top: 0 !important; }
-			&.row_of_5--tablet .col:nth-child(-n+5) { margin-top: 0 !important; }
-			&.row_of_6--tablet .col:nth-child(-n+6) { margin-top: 0 !important; }
-		}
-
-		.tablet_full_span {
-			width: 100%;
-			margin-left: 0;
-		}
-
-		&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
-
-		&.row_of_2--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(2n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_3--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(3n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_4--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(4n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_5--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(5n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_6--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(6n+1) { margin-left: 0 !important; }
-		}
 	}
-
-
 	.gutter--m {
 		$gutter: $gutterMed;
 
-		&.row_of_2 .col { margin-left: $gutter; }
-		&.row_of_3 .col { margin-left: $gutter; }
-		&.row_of_4 .col { margin-left: $gutter; }
-		&.row_of_5 .col { margin-left: $gutter; }
-		&.row_of_6 .col { margin-left: $gutter; }
+		&.hasRows,
+		&.hasRows--tablet {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--tablet {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--tablet.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
 
 		@for $cols from 2 through 12 {
 			$span: $cols;
 			@while $span > 0 {
 				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.tablet_#{$span}_of_#{$cols} { width: 100% !important; }
+					.tablet_#{$span}_of_#{$cols} { width: 100%; }
 				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
-					.tablet_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
+					.tablet_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
 				}
 				$span: $span - 1;
 			}
@@ -553,852 +679,796 @@ $gutterLarge: 7%;
 				margin-left: 0;
 			}
 		}
-
-		&.hasRows {
-			.col {
-				margin-top: $gutter;
-			}
-		}
-
-		&.hasRows--tablet {
-			.col {
-				margin-top: $gutter;
-			}
-
-			&.hasRows {
-				&.row_of_2 .col:nth-child(-n+2) { margin-top: $gutter; }
-				&.row_of_3 .col:nth-child(-n+3) { margin-top: $gutter; }
-				&.row_of_4 .col:nth-child(-n+4) { margin-top: $gutter; }
-				&.row_of_5 .col:nth-child(-n+5) { margin-top: $gutter; }
-				&.row_of_6 .col:nth-child(-n+6) { margin-top: $gutter; }
-			}
-
-			&.row_of_2--tablet .col:nth-child(-n+2) { margin-top: 0 !important; }
-			&.row_of_3--tablet .col:nth-child(-n+3) { margin-top: 0 !important; }
-			&.row_of_4--tablet .col:nth-child(-n+4) { margin-top: 0 !important; }
-			&.row_of_5--tablet .col:nth-child(-n+5) { margin-top: 0 !important; }
-			&.row_of_6--tablet .col:nth-child(-n+6) { margin-top: 0 !important; }
-		}
-
-		.tablet_full_span {
-			width: 100%;
-			margin-left: 0;
-		}
-
-		&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
-
-		&.row_of_2--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(2n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_3--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(3n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_4--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(4n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_5--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(5n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_6--tablet {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(6n+1) { margin-left: 0 !important; }
-		}
 	}
 }
-
-
-
-// busted mobile
-
-// @media only screen and (max-width:580px) {
-// 	//Here, we reset the variables based on breakpoint.
-// 	//Change them here if you want gutter size to change based on mobile!
-// 	$gutterBase: 2.5%;
-// 	$gutterNone: 0%;
-// 	$gutterMed: 5%;
-// 	$gutterLarge: 7%;
-
-
-// 	// .grid-group {
-// 	// 	&.row_of_2 .col:nth-child(2n+1) { margin-left: 0 !important; }
-// 	// 	&.row_of_3 .col:nth-child(3n+1) { margin-left: 0 !important; }
-// 	// 	&.row_of_4 .col:nth-child(4n+1) { margin-left: 0 !important; }
-// 	// 	&.row_of_5 .col:nth-child(5n+1) { margin-left: 0 !important; }
-// 	// 	&.row_of_6 .col:nth-child(6n+1) { margin-left: 0 !important; }
-// 	// }
-
-
-// 	.gutter {
-// 		$gutter: $gutterBase;
-
-// 		.col {
-// 			width: 100%;
-// 			margin-top: $gutter;
-
-// 			&:first-child {
-// 				margin-top: 0;
-// 			}
-// 		}
-
-// 		&.row_of_2 .col { margin-left: 0; }
-// 		&.row_of_3 .col { margin-left: 0; }
-// 		&.row_of_4 .col { margin-left: 0; }
-// 		&.row_of_5 .col { margin-left: 0; }
-// 		&.row_of_6 .col { margin-left: 0; }
-
-// 		// &.row_of_2--mobile .col { margin-left: $gutter !important; }
-// 		// &.row_of_3--mobile .col { margin-left: $gutter !important; }
-// 		// &.row_of_4--mobile .col { margin-left: $gutter !important; }
-// 		// &.row_of_5--mobile .col { margin-left: $gutter !important; }
-// 		// &.row_of_6--mobile .col { margin-left: $gutter !important; }
-
-// 		@for $cols from 2 through 12 {
-// 			$span: $cols;
-// 			@while $span > 0 {
-// 				@if ($span == $cols) {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-// 				} @else {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
-// 				}
-// 				$span: $span - 1;
-// 			}
-// 		}
-
-// 		.col {
-// 			margin-left: 0;
-
-// 			&:first-child {
-// 				margin-left: 0;
-// 			}
-// 		}
-
-// 		&.hasRows {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-
-// 			&.row_of_2 .col:nth-child(-n+2),
-// 			&.row_of_3 .col:nth-child(-n+3),
-// 			&.row_of_4 .col:nth-child(-n+4),
-// 			&.row_of_5 .col:nth-child(-n+5),
-// 			&.row_of_6 .col:nth-child(-n+6) {
-// 				margin-top: $gutter;
-
-// 				&:first-child {
-// 					margin-top: 0;
-// 				}
-// 			}
-// 		}
-
-// 		&.hasRows--mobile {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-
-// 			&.hasRows {
-// 				&.row_of_2 .col:nth-child(-n+2) { margin-top: $gutter; }
-// 				&.row_of_3 .col:nth-child(-n+3) { margin-top: $gutter; }
-// 				&.row_of_4 .col:nth-child(-n+4) { margin-top: $gutter; }
-// 				&.row_of_5 .col:nth-child(-n+5) { margin-top: $gutter; }
-// 				&.row_of_6 .col:nth-child(-n+6) { margin-top: $gutter; }
-// 			}
-
-// 			&.row_of_2--mobile .col:nth-child(-n+2) { margin-top: 0 !important; }
-// 			&.row_of_3--mobile .col:nth-child(-n+3) { margin-top: 0 !important; }
-// 			&.row_of_4--mobile .col:nth-child(-n+4) { margin-top: 0 !important; }
-// 			&.row_of_5--mobile .col:nth-child(-n+5) { margin-top: 0 !important; }
-// 			&.row_of_6--mobile .col:nth-child(-n+6) { margin-top: 0 !important; }
-// 		}
-// 	}
-
-// 	.gutter--none {
-// 		$gutter: $gutterNone;
-
-// 		.col {width: 100%;}
-
-// 		&.row_of_2 .col { margin-left: 0 !important; }
-// 		&.row_of_3 .col { margin-left: 0 !important; }
-// 		&.row_of_4 .col { margin-left: 0 !important; }
-// 		&.row_of_5 .col { margin-left: 0 !important; }
-// 		&.row_of_6 .col { margin-left: 0 !important; }
-
-// 		&.row_of_2--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_3--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_4--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_5--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_6--mobile .col { margin-left: $gutter !important; }
-
-// 		@for $cols from 2 through 12 {
-// 			$span: $cols;
-// 			@while $span > 0 {
-// 				@if ($span == $cols) {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-// 				} @else {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: decimal-round((100 * $span/$cols), 2, 'floor') * 1% !important; }
-// 				}
-// 				$span: $span - 1;
-// 			}
-// 		}
-
-
-// 		.col {
-// 			margin-left: 0;
-
-// 			&:first-child {
-// 				margin-left: 0;
-// 			}
-// 		}
-
-// 		&.hasRows {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-
-// 			&.row_of_2 .col:nth-child(-n+2),
-// 			&.row_of_3 .col:nth-child(-n+3),
-// 			&.row_of_4 .col:nth-child(-n+4),
-// 			&.row_of_5 .col:nth-child(-n+5),
-// 			&.row_of_6 .col:nth-child(-n+6) {
-// 				margin-top: $gutter;
-
-// 				&:first-child {
-// 					margin-top: 0;
-// 				}
-// 			}
-// 		}
-
-// 		&.hasRows--mobile {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-// 		}
-// 	}
-
-// 	.gutter--l {
-// 		$gutter: $gutterLarge;
-
-// 		.col {width: 100%;}
-
-// 		&.row_of_2 .col { margin-left: 0 !important; }
-// 		&.row_of_3 .col { margin-left: 0 !important; }
-// 		&.row_of_4 .col { margin-left: 0 !important; }
-// 		&.row_of_5 .col { margin-left: 0 !important; }
-// 		&.row_of_6 .col { margin-left: 0 !important; }
-
-// 		&.row_of_2--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_3--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_4--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_5--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_6--mobile .col { margin-left: $gutter !important; }
-
-// 		@for $cols from 2 through 12 {
-// 			$span: $cols;
-// 			@while $span > 0 {
-// 				@if ($span == $cols) {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-// 				} @else {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
-// 				}
-// 				$span: $span - 1;
-// 			}
-// 		}
-
-// 		.col {
-// 			margin-left: $gutter;
-
-// 			&:first-child {
-// 				margin-left: 0;
-// 			}
-// 		}
-
-// 		&.hasRows {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-
-// 			&.row_of_2 .col:nth-child(-n+2),
-// 			&.row_of_3 .col:nth-child(-n+3),
-// 			&.row_of_4 .col:nth-child(-n+4),
-// 			&.row_of_5 .col:nth-child(-n+5),
-// 			&.row_of_6 .col:nth-child(-n+6) {
-// 				margin-top: $gutter;
-
-// 				&:first-child {
-// 					margin-top: 0;
-// 				}
-// 			}
-// 		}
-
-// 		&.hasRows--mobile {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-// 		}
-// 	}
-// 	.gutter--m {
-// 		$gutter: $gutterMed;
-
-// 		.col {width: 100%;}
-
-// 		&.row_of_2 .col { margin-left: 0 !important; }
-// 		&.row_of_3 .col { margin-left: 0 !important; }
-// 		&.row_of_4 .col { margin-left: 0 !important; }
-// 		&.row_of_5 .col { margin-left: 0 !important; }
-// 		&.row_of_6 .col { margin-left: 0 !important; }
-
-// 		&.row_of_2--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_3--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_4--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_5--mobile .col { margin-left: $gutter !important; }
-// 		&.row_of_6--mobile .col { margin-left: $gutter !important; }
-
-// 		@for $cols from 2 through 12 {
-// 			$span: $cols;
-// 			@while $span > 0 {
-// 				@if ($span == $cols) {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-// 				} @else {
-// 					.span_#{$span}_of_#{$cols} { width: 100%; }
-// 					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
-// 				}
-// 				$span: $span - 1;
-// 			}
-// 		}
-
-// 		.col {
-// 			margin-left: $gutter;
-
-// 			&:first-child {
-// 				margin-left: 0;
-// 			}
-// 		}
-
-// 		&.hasRows {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-
-// 			&.row_of_2 .col:nth-child(-n+2),
-// 			&.row_of_3 .col:nth-child(-n+3),
-// 			&.row_of_4 .col:nth-child(-n+4),
-// 			&.row_of_5 .col:nth-child(-n+5),
-// 			&.row_of_6 .col:nth-child(-n+6) {
-// 				margin-top: $gutter;
-
-// 				&:first-child {
-// 					margin-top: 0;
-// 				}
-// 			}
-// 		}
-
-// 		&.hasRows--mobile {
-// 			.col {
-// 				margin-top: $gutter;
-// 			}
-// 		}
-// 	}
-// }
-
-
 
 @media only screen and (max-width:580px) {
 	//Here, we reset the variables based on breakpoint.
 	//Change them here if you want gutter size to change based on mobile!
 	$gutterBase: 2.5%;
 	$gutterNone: 0%;
-	$gutterMed: 5%;
-	$gutterLarge: 7%;
+	$gutterMed: 7%;
+	$gutterLarge: 10%;
 
-	.grid-group {
-		&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
+	.gutter {
+		$gutter: $gutterBase;
+
+		&.hasRows,
+		&.hasRows--mobile {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--mobile {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
+
+		@for $cols from 2 through 12 {
+			$span: $cols;
+			@while $span > 0 {
+				@if ($span == $cols) {
+					.mobile_#{$span}_of_#{$cols} { width: 100%; }
+				} @else {
+					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
+				}
+				$span: $span - 1;
+			}
+		}
+
+		.col {
+			margin-left: $gutter;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
 	}
 
+	.gutter--none {
+		$gutter: $gutterNone;
+
+		&.hasRows,
+		&.hasRows--mobile {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--mobile {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
+
+		@for $cols from 2 through 12 {
+			$span: $cols;
+			@while $span > 0 {
+				@if ($span == $cols) {
+					.mobile_#{$span}_of_#{$cols} { width: 100%; }
+				} @else {
+					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
+				}
+				$span: $span - 1;
+			}
+		}
+
+		.col {
+			margin-left: $gutter;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.gutter--l {
+		$gutter: $gutterLarge;
+
+		&.hasRows,
+		&.hasRows--mobile {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--mobile {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
+
+		@for $cols from 2 through 12 {
+			$span: $cols;
+			@while $span > 0 {
+				@if ($span == $cols) {
+					.mobile_#{$span}_of_#{$cols} { width: 100%; }
+				} @else {
+					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
+				}
+				$span: $span - 1;
+			}
+		}
+
+		.col {
+			margin-left: $gutter;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.gutter--m {
+		$gutter: $gutterMed;
+
+		&.hasRows,
+		&.hasRows--mobile {
+			.col {
+				margin-top: $gutter;
+			}
+		}
+
+		&.hasRows--mobile {
+			&.row_of_1.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				margin-left: 0;
+
+				.row_of_2.grid-group .col { margin-left: $gutter; }
+				.row_of_3.grid-group .col { margin-left: $gutter; }
+				.row_of_4.grid-group .col { margin-left: $gutter; }
+				.row_of_5.grid-group .col { margin-left: $gutter; }
+				.row_of_6.grid-group .col { margin-left: $gutter; }
+				.row_of_2.grid-group .col:first-child { margin-left: 0; }
+				.row_of_3.grid-group .col:first-child { margin-left: 0; }
+				.row_of_4.grid-group .col:first-child { margin-left: 0; }
+				.row_of_5.grid-group .col:first-child { margin-left: 0; }
+				.row_of_6.grid-group .col:first-child { margin-left: 0; }
+			}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: 0;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: 0;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: 0;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: 0;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: 0;}
+
+
+			&.row_of_1.grid-group .col {
+				margin-top: $gutter;
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.row_of_1--mobile.grid-group .col {
+				&:first-child { margin-top: 0; }
+
+				.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+
+				.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+				.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+				.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+				.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+				.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+			}
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: 0; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: 0; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: 0; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: 0; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: 0; }
+		}
+
+		@for $cols from 2 through 12 {
+			$span: $cols;
+			@while $span > 0 {
+				@if ($span == $cols) {
+					.mobile_#{$span}_of_#{$cols} { width: 100%; }
+				} @else {
+					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
+				}
+				$span: $span - 1;
+			}
+		}
+
+		.col {
+			margin-left: $gutter;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+
+
+@media only screen and (max-width:380px) {
+	//Here, we reset the variables based on breakpoint.
+	//Change them here if you want gutter size to change based on mobile!
+	$gutterBase: 2.5%;
+	$gutterNone: 0%;
+	$gutterMed: 7%;
+	$gutterLarge: 10%;
 
 	.gutter {
 		$gutter: $gutterBase;
 
 		.col {
-			width: 100% !important;
+			width: 100%;
+			margin-left: 0 !important;
 			margin-top: $gutter;
-			margin-left: 0;
 
 			&:first-child {
-				margin-top: 0;
-			}
-		}
-
-		&.row_of_2 .col { margin-left: 0; }
-		&.row_of_3 .col { margin-left: 0; }
-		&.row_of_4 .col { margin-left: 0; }
-		&.row_of_5 .col { margin-left: 0; }
-		&.row_of_6 .col { margin-left: 0; }
-
-		@for $cols from 2 through 12 {
-			$span: $cols;
-			@while $span > 0 {
-				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
-					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
-				}
-				$span: $span - 1;
+				margin-top: 0 !important;
 			}
 		}
 
 		&.hasRows {
-			.col {
-				margin-top: $gutter;
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
+
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.hasRows--mobile,
+			&.hasRows--tablet {
+				&.row_of_2.grid-group .col { margin-left: $gutter; }
+				&.row_of_3.grid-group .col { margin-left: $gutter; }
+				&.row_of_4.grid-group .col { margin-left: $gutter; }
+				&.row_of_5.grid-group .col { margin-left: $gutter; }
+				&.row_of_6.grid-group .col { margin-left: $gutter; }
+				&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+				&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
+
+				&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
 			}
-
-			&.row_of_2 .col:nth-child(-n+2) {
-				margin-top: $gutter;
-
-				&:first-child { margin-top: 0; }
-			}
-			&.row_of_3 .col:nth-child(-n+3) {
-				margin-top: $gutter;
-
-				&:first-child { margin-top: 0; }
-			}
-			&.row_of_4 .col:nth-child(-n+4) {
-				margin-top: $gutter;
-
-				&:first-child { margin-top: 0; }
-			}
-			&.row_of_5 .col:nth-child(-n+5) {
-				margin-top: $gutter;
-
-				&:first-child { margin-top: 0; }
-			}
-			&.row_of_6 .col:nth-child(-n+6) {
-				margin-top: $gutter;
-
-				&:first-child { margin-top: 0; }
-			}
-		}
-
-		&.hasRows--mobile {
-			.col {
-				margin-top: $gutter;
-			}
-
-			&.hasRows {
-				&.row_of_2 .col:nth-child(-n+2) { margin-top: $gutter; }
-				&.row_of_3 .col:nth-child(-n+3) { margin-top: $gutter; }
-				&.row_of_4 .col:nth-child(-n+4) { margin-top: $gutter; }
-				&.row_of_5 .col:nth-child(-n+5) { margin-top: $gutter; }
-				&.row_of_6 .col:nth-child(-n+6) { margin-top: $gutter; }
-			}
-
-			&.row_of_2--mobile .col:nth-child(-n+2) { margin-top: 0 !important; }
-			&.row_of_3--mobile .col:nth-child(-n+3) { margin-top: 0 !important; }
-			&.row_of_4--mobile .col:nth-child(-n+4) { margin-top: 0 !important; }
-			&.row_of_5--mobile .col:nth-child(-n+5) { margin-top: 0 !important; }
-			&.row_of_6--mobile .col:nth-child(-n+6) { margin-top: 0 !important; }
-		}
-
-		.mobile_full_span {
-			width: 100%;
-			margin-left: 0;
-		}
-
-		// &.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		// &.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		// &.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		// &.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		// &.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
-
-
-		&.row_of_2--mobile {
-			.col { margin-left: $gutter; }
-
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(2n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_3--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(3n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_4--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(4n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_5--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(5n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_6--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(6n+1) { margin-left: 0 !important; }
 		}
 	}
-
 
 	.gutter--none {
 		$gutter: $gutterNone;
 
-		&.row_of_2 .col { margin-left: $gutter !important; }
-		&.row_of_3 .col { margin-left: $gutter !important; }
-		&.row_of_4 .col { margin-left: $gutter !important; }
-		&.row_of_5 .col { margin-left: $gutter !important; }
-		&.row_of_6 .col { margin-left: $gutter !important; }
-
-		@for $cols from 2 through 12 {
-			$span: $cols;
-			@while $span > 0 {
-				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round((100 * $span/$cols), 2, 'floor') * 1%; }
-					.mobile_#{$span}_of_#{$cols} { width: decimal-round((100 * $span/$cols), 2, 'floor') * 1% !important; }
-				}
-				$span: $span - 1;
-			}
-		}
-
 		.col {
-			margin-left: $gutter;
+			width: 100%;
+			margin-left: 0 !important;
+			margin-top: $gutter;
 
 			&:first-child {
-				margin-left: 0;
+				margin-top: 0 !important;
 			}
 		}
 
 		&.hasRows {
-			.col {
-				margin-top: $gutter;
-			}
-		}
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
 
-		&.hasRows--mobile {
-			.col {
-				margin-top: $gutter;
-			}
-		}
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
 
-		.mobile_full_span {
-			width: 100%;
-			margin-left: 0;
+			&.hasRows--mobile,
+			&.hasRows--tablet {
+				&.row_of_2.grid-group .col { margin-left: $gutter; }
+				&.row_of_3.grid-group .col { margin-left: $gutter; }
+				&.row_of_4.grid-group .col { margin-left: $gutter; }
+				&.row_of_5.grid-group .col { margin-left: $gutter; }
+				&.row_of_6.grid-group .col { margin-left: $gutter; }
+				&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+				&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
+
+				&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			}
 		}
 	}
-
 
 	.gutter--l {
 		$gutter: $gutterLarge;
 
-		&.row_of_2 .col { margin-left: $gutter; }
-		&.row_of_3 .col { margin-left: $gutter; }
-		&.row_of_4 .col { margin-left: $gutter; }
-		&.row_of_5 .col { margin-left: $gutter; }
-		&.row_of_6 .col { margin-left: $gutter; }
-
-		@for $cols from 2 through 12 {
-			$span: $cols;
-			@while $span > 0 {
-				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
-					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
-				}
-				$span: $span - 1;
-			}
-		}
-
 		.col {
-			margin-left: $gutter;
+			width: 100%;
+			margin-left: 0 !important;
+			margin-top: $gutter;
 
 			&:first-child {
-				margin-left: 0;
+				margin-top: 0 !important;
 			}
 		}
 
 		&.hasRows {
-			.col {
-				margin-top: $gutter;
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
+
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.hasRows--mobile,
+			&.hasRows--tablet {
+				&.row_of_2.grid-group .col { margin-left: $gutter; }
+				&.row_of_3.grid-group .col { margin-left: $gutter; }
+				&.row_of_4.grid-group .col { margin-left: $gutter; }
+				&.row_of_5.grid-group .col { margin-left: $gutter; }
+				&.row_of_6.grid-group .col { margin-left: $gutter; }
+				&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+				&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
+
+				&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
 			}
-		}
-
-		&.hasRows--mobile {
-			.col {
-				margin-top: $gutter;
-			}
-
-			&.hasRows {
-				&.row_of_2 .col:nth-child(-n+2) { margin-top: $gutter; }
-				&.row_of_3 .col:nth-child(-n+3) { margin-top: $gutter; }
-				&.row_of_4 .col:nth-child(-n+4) { margin-top: $gutter; }
-				&.row_of_5 .col:nth-child(-n+5) { margin-top: $gutter; }
-				&.row_of_6 .col:nth-child(-n+6) { margin-top: $gutter; }
-			}
-
-			&.row_of_2--mobile .col:nth-child(-n+2) { margin-top: 0 !important; }
-			&.row_of_3--mobile .col:nth-child(-n+3) { margin-top: 0 !important; }
-			&.row_of_4--mobile .col:nth-child(-n+4) { margin-top: 0 !important; }
-			&.row_of_5--mobile .col:nth-child(-n+5) { margin-top: 0 !important; }
-			&.row_of_6--mobile .col:nth-child(-n+6) { margin-top: 0 !important; }
-		}
-
-		.mobile_full_span {
-			width: 100%;
-			margin-left: 0;
-		}
-
-		&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
-
-		&.row_of_2--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(2n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_3--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(3n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_4--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(4n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_5--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(5n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_6--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(6n+1) { margin-left: 0 !important; }
 		}
 	}
-
-
 	.gutter--m {
 		$gutter: $gutterMed;
 
-		&.row_of_2 .col { margin-left: $gutter; }
-		&.row_of_3 .col { margin-left: $gutter; }
-		&.row_of_4 .col { margin-left: $gutter; }
-		&.row_of_5 .col { margin-left: $gutter; }
-		&.row_of_6 .col { margin-left: $gutter; }
-
-		@for $cols from 2 through 12 {
-			$span: $cols;
-			@while $span > 0 {
-				@if ($span == $cols) {
-					.span_#{$span}_of_#{$cols} { width: 100%; }
-					.mobile_#{$span}_of_#{$cols} { width: 100% !important; }
-				} @else {
-					.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor'); }
-					.mobile_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($gutter * ($cols - 1))) / $cols) * $span) + (($span - 1) * $gutter) , 2, 'floor') !important; }
-				}
-				$span: $span - 1;
-			}
-		}
-
 		.col {
-			margin-left: $gutter;
+			width: 100%;
+			margin-left: 0 !important;
+			margin-top: $gutter;
 
 			&:first-child {
-				margin-left: 0;
+				margin-top: 0 !important;
 			}
 		}
 
 		&.hasRows {
-			.col {
-				margin-top: $gutter;
+			&.row_of_2.grid-group .col { margin-left: $gutter; }
+			&.row_of_3.grid-group .col { margin-left: $gutter; }
+			&.row_of_4.grid-group .col { margin-left: $gutter; }
+			&.row_of_5.grid-group .col { margin-left: $gutter; }
+			&.row_of_6.grid-group .col { margin-left: $gutter; }
+			&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+			&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+			&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+			&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+			&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+			&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
+
+			&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+			&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+			&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+			&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+			&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+			&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+
+			&.hasRows--mobile,
+			&.hasRows--tablet {
+				&.row_of_2.grid-group .col { margin-left: $gutter; }
+				&.row_of_3.grid-group .col { margin-left: $gutter; }
+				&.row_of_4.grid-group .col { margin-left: $gutter; }
+				&.row_of_5.grid-group .col { margin-left: $gutter; }
+				&.row_of_6.grid-group .col { margin-left: $gutter; }
+				&.row_of_2--tablet .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--tablet .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--tablet .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--tablet .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--tablet .col:nth-child(6n+1) {margin-left: $gutter;}
+				&.row_of_2--mobile .col:nth-child(2n+1) {margin-left: $gutter;}
+				&.row_of_3--mobile .col:nth-child(3n+1) {margin-left: $gutter;}
+				&.row_of_4--mobile .col:nth-child(4n+1) {margin-left: $gutter;}
+				&.row_of_5--mobile .col:nth-child(5n+1) {margin-left: $gutter;}
+				&.row_of_6--mobile .col:nth-child(6n+1) {margin-left: $gutter;}
+
+				&.row_of_2.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--tablet.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--tablet.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--tablet.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--tablet.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--tablet.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
+				&.row_of_2--mobile.grid-group .col:nth-child(-n+2) { margin-top: $gutter; }
+				&.row_of_3--mobile.grid-group .col:nth-child(-n+3) { margin-top: $gutter; }
+				&.row_of_4--mobile.grid-group .col:nth-child(-n+4) { margin-top: $gutter; }
+				&.row_of_5--mobile.grid-group .col:nth-child(-n+5) { margin-top: $gutter; }
+				&.row_of_6--mobile.grid-group .col:nth-child(-n+6) { margin-top: $gutter; }
 			}
-		}
-
-		&.hasRows--mobile {
-			.col {
-				margin-top: $gutter;
-			}
-
-			&.hasRows {
-				&.row_of_2 .col:nth-child(-n+2) { margin-top: $gutter; }
-				&.row_of_3 .col:nth-child(-n+3) { margin-top: $gutter; }
-				&.row_of_4 .col:nth-child(-n+4) { margin-top: $gutter; }
-				&.row_of_5 .col:nth-child(-n+5) { margin-top: $gutter; }
-				&.row_of_6 .col:nth-child(-n+6) { margin-top: $gutter; }
-			}
-
-			&.row_of_2--mobile .col:nth-child(-n+2) { margin-top: 0 !important; }
-			&.row_of_3--mobile .col:nth-child(-n+3) { margin-top: 0 !important; }
-			&.row_of_4--mobile .col:nth-child(-n+4) { margin-top: 0 !important; }
-			&.row_of_5--mobile .col:nth-child(-n+5) { margin-top: 0 !important; }
-			&.row_of_6--mobile .col:nth-child(-n+6) { margin-top: 0 !important; }
-		}
-
-		.mobile_full_span {
-			width: 100%;
-			margin-left: 0;
-		}
-
-		&.row_of_2 .col:nth-child(2n+1) { margin-left: 0; }
-		&.row_of_3 .col:nth-child(3n+1) { margin-left: 0; }
-		&.row_of_4 .col:nth-child(4n+1) { margin-left: 0; }
-		&.row_of_5 .col:nth-child(5n+1) { margin-left: 0; }
-		&.row_of_6 .col:nth-child(6n+1) { margin-left: 0; }
-
-		&.row_of_2--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(2n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_3--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(3n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_4--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(4n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_5--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(5n+1) { margin-left: 0 !important; }
-		}
-
-		&.row_of_6--mobile {
-			&.row_of_2 .col:nth-child(2n+1) { margin-left: $gutter; }
-			&.row_of_3 .col:nth-child(3n+1) { margin-left: $gutter; }
-			&.row_of_4 .col:nth-child(4n+1) { margin-left: $gutter; }
-			&.row_of_5 .col:nth-child(5n+1) { margin-left: $gutter; }
-			&.row_of_6 .col:nth-child(6n+1) { margin-left: $gutter; }
-
-			.col:nth-child(6n+1) { margin-left: 0 !important; }
 		}
 	}
 }

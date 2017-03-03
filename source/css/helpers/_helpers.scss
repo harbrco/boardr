@@ -2,10 +2,10 @@
 .vAlign {
 	position: relative;
 	visibility: hidden; /* <- needed to hide flash of non vertical aligned content before complete page load. */
-}
-.vAlign-abs {
-	position: absolute;
-	visibility: hidden; /* <- needed to hide flash of non vertical aligned content before complete page load. */
+
+	&.vAlign--abs {
+		position: absolute;
+	}
 }
 
 
@@ -179,13 +179,24 @@
 		background-color: rgba($black, 0.3);
 		z-index: 2;
 
-		&.overlay--5 {
-			background-color: rgba($black, 0.5);
-		}
-
-		&.overlay--75 {
-			background-color: rgba($black, 0.75);
-		}
+		&.overlay--1 { background-color: rgba($black, 0.1); }
+		&.overlay--15 { background-color: rgba($black, 0.15); }
+		&.overlay--2 { background-color: rgba($black, 0.2); }
+		&.overlay--25 { background-color: rgba($black, 0.25); }
+		&.overlay--3 { background-color: rgba($black, 0.3); }
+		&.overlay--35 { background-color: rgba($black, 0.35); }
+		&.overlay--4 { background-color: rgba($black, 0.4); }
+		&.overlay--45 { background-color: rgba($black, 0.45); }
+		&.overlay--5 { background-color: rgba($black, 0.5); }
+		&.overlay--55 { background-color: rgba($black, 0.55); }
+		&.overlay--6 { background-color: rgba($black, 0.6); }
+		&.overlay--65 { background-color: rgba($black, 0.65); }
+		&.overlay--7 { background-color: rgba($black, 0.7); }
+		&.overlay--75 { background-color: rgba($black, 0.75); }
+		&.overlay--8 { background-color: rgba($black, 0.8); }
+		&.overlay--85 { background-color: rgba($black, 0.85); }
+		&.overlay--9 { background-color: rgba($black, 0.9); }
+		&.overlay--95 { background-color: rgba($black, 0.95); }
 	}
 
 	.overlay-content {

@@ -236,33 +236,87 @@
 
 		// Content Module Sliders
 		var cardCarousel = $('.card-carousel .card-list');
-
 		if ( cardCarousel.length >= 1 ) {
-			cardCarousel.slick({
-				dots: false,
-				infinite: true,
-				draggable: false,
-				slidesToShow: 4,
-				slidesToScroll: 4,
-				appendArrows: '.slider-arrows .inner',
-				responsive: [
-					{
-						breakpoint: 1280,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 3
+			cardCarousel.each(function (idx) {
+				var carouselId = "carousel" + idx;
+				var $el = $(this);
+				var $wrapper = $el.closest('.card-carousel-wrapper');
+				$wrapper.addClass(carouselId);
+				$el.attr('id', carouselId);
+
+				$el.slick({
+					dots: false,
+					infinite: true,
+					draggable: false,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					appendArrows: ".card-carousel-wrapper." + carouselId + " .card-carousel-arrows .inner",
+					responsive: [
+						{
+							breakpoint: 1280,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 3
+							}
+						},
+						{
+						breakpoint: 900,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2
+							}
 						}
-					},
-					{
-					breakpoint: 768,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2
-						}
-					}
-				]
+					]
+				});
 			});
 		}
+
+
+		var ctaSlider = $('.cta-slider');
+		if ( ctaSlider.length >= 1 ) {
+			ctaSlider.each(function (idx) {
+				var sliderId = "slider" + idx;
+				var $el = $(this);
+				var $wrapper = $el.closest('.cta-slider-wrapper');
+				$wrapper.addClass(sliderId);
+				$el.attr('id', sliderId);
+
+				$el.slick({
+					slide: "#" + sliderId +" .slide",
+					appendArrows: ".cta-slider-wrapper." + sliderId + " .cta-slider-arrows .inner",
+					dots: false,
+					fade: true,
+					infinite: true,
+					draggable: false
+				});
+			});
+		}
+
+
+		var productSlider = $('.product-slider');
+		var productSliderNav = $('.product-slider-nav');
+		if ( productSliderNav.length >= 1 ) {
+			productSlider.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				adaptiveHeight: true,
+				appendArrows: '.product-slider-arrows .inner',
+				asNavFor: productSliderNav
+			});
+
+			productSliderNav.slick({
+				slidesToShow: 7,
+				slidesToScroll: 1,
+				asNavFor: productSlider,
+				centerPadding: '0',
+				infinite: true,
+				focusOnSelect: true,
+				dots: false,
+				arrows: false
+			});
+		}
+
 
 
 
@@ -330,40 +384,6 @@
 			// });
 		};
 		waypointInit();
-
-
-
-		// MAKE SURE TO ADD ANY NEW LIBRARIES TO THIS INIT FUNCTION (For AJAX script reloading) - - - - - - -
-		/* jshint ignore:start */
-		// var libsInit = function() {
-		// 	vAlignShow();
-		// 	vAlignFun();
-		// 	aosInit();
-
-		// 	$.stellar('destroy');
-		// 	setTimeout(function(){
-		// 		stellarJsInit();
-		// 	}, 200);
-
-		// 	screenSizeCalc();
-		// 	smoothScroll();
-
-		// 	setTimeout(function(){
-		// 		Waypoint.refreshAll();
-		// 		waypointInit();
-		// 	}, 200);
-
-		// 	$(window).resize(function() {
-		// 		vAlignFun();
-		// 		screenSizeCalc();
-		// 	}).resize();
-
-		// 	// Listen for resize changes (mobile orientation change)
-		// 	window.addEventListener("resize", function() {
-		// 		vAlignFun();
-		// 	}, false);
-		// };
-		/* jshint ignore:end */
 
 
 	});

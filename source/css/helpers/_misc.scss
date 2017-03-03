@@ -58,6 +58,7 @@
 		background: transparent;
 		pointer-events: auto;
 		text-indent: -9999px;
+		padding: 0;
 	}
 
 	.slick-next,
@@ -88,6 +89,32 @@
 		}
 		.slick-prev {
 			background-image: url('../../img/icons/slider-arrow-left-black@2x.png');
+		}
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.card-carousel-wrapper {
+		.slider-arrows {
+			.slick-next,
+			.slick-prev {
+				width: 26px;
+				height: 14px;
+				background-size: 26px 14px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.card-carousel-wrapper {
+		.slider-arrows {
+			.slick-next,
+			.slick-prev {
+				width: 22px;
+				height: 12px;
+				background-size: 22px 12px;
+			}
 		}
 	}
 }

@@ -36,21 +36,43 @@
 	margin: 0 auto;
 	position: relative;
 }
+.container--xs {
+	@extend %clear;
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
 
 @media only screen and (max-width:1140px) {
-	.container {
-		width: 88%;
+	.container,
+	.container--full,
+	.container--l {
+		width: 94%;
 	}
 }
 @media only screen and (max-width:900px) {
-	.container {
-		width: 86%;
+	.container,
+	.container--full,
+	.container--l,
+	.container--s {
+		width: 93%;
+	}
+
+	.container--xs {
+		width: 84%;
 	}
 }
 @media only screen and (max-width:680px) {
+	.container,
 	.container--full,
-	.container {
-		width: 90%;
+	.container--l,
+	.container--s {
+		width: 92%;
+	}
+
+	.container--xs {
+		width: 88%;
 	}
 }
 
