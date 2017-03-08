@@ -137,24 +137,14 @@
 			heroSlider.slick({
 				dots: false,
 				fade: true,
+				autoplay: true,
+				autoplaySpeed: 5000,
 				infinite: true,
 				draggable: false,
 				appendArrows: '.slider-arrows .inner',
 				customPaging : function(slider, i) {
 					$(slider.$slides[i]).data();
 					return '<a class="btn btn--alt">0'+(i+1)+'</a>';
-				}
-			}).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-				var thisSlider = $(this);
-				var thisSliderPager = thisSlider.closest('.slider-container').find('.slick-dots');
-				var nextSlideEl = $(slick.$slides.get(nextSlide));
-
-				thisSliderPager.removeClass('pagerIsLight pagerIsDark');
-
-				if ( nextSlideEl.hasClass('light-pager') ) {
-					thisSliderPager.addClass('pagerIsLight');
-				} else {
-					thisSliderPager.addClass('pagerIsDark');
 				}
 			});
 
@@ -313,7 +303,41 @@
 				infinite: true,
 				focusOnSelect: true,
 				dots: false,
-				arrows: false
+				arrows: false,
+				responsive: [
+					{
+						breakpoint: 1440,
+						settings: { slidesToShow: 6 }
+					},
+					{
+						breakpoint: 1280,
+						settings: { slidesToShow: 5 }
+					},
+					{
+					breakpoint: 1024,
+						settings: { slidesToShow: 4 }
+					},
+					{
+						breakpoint: 900,
+						settings: { slidesToShow: 7 }
+					},
+					{
+						breakpoint: 768,
+						settings: { slidesToShow: 6 }
+					},
+					{
+						breakpoint: 680,
+						settings: { slidesToShow: 5 }
+					},
+					{
+					breakpoint: 580,
+						settings: { slidesToShow: 4 }
+					},
+					{
+					breakpoint: 460,
+						settings: { slidesToShow: 3 }
+					}
+				]
 			});
 		}
 

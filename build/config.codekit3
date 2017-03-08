@@ -7,7 +7,7 @@
 		"uuidString": "8E13E601-EE75-426D-845A-BED127A24BE2"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
 	"\/buttons.html.erb": {
 		"ft": 8192,
@@ -25,6 +25,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/css\/.sass-cache\/0e59c3e1cfe4a9c47a3f1c9bad8251a1533b248e\/site.css.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/19fee33a73f271971c1628647bf3826d53bac38e\/bootstrap-grid.scssc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/.sass-cache\/19fee33a73f271971c1628647bf3826d53bac38e\/bootstrap-grid.scssc",
 		"oF": 0
 		},
 	"\/css\/.sass-cache\/19fee33a73f271971c1628647bf3826d53bac38e\/normalize.scssc": {
@@ -199,6 +205,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/css\/.sass-cache\/7ba032f191e56e3c97daa0e71c94c792e8376216\/_common.scssc",
+		"oF": 0
+		},
+	"\/css\/.sass-cache\/7ba032f191e56e3c97daa0e71c94c792e8376216\/_product.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/css\/.sass-cache\/7ba032f191e56e3c97daa0e71c94c792e8376216\/_product.scssc",
 		"oF": 0
 		},
 	"\/css\/.sass-cache\/81e8793e379fc1fa59facffbe6aed4eae1f4502a\/_footer.scssc": {
@@ -478,45 +490,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/css\/layouts\/_flexbox.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/layouts\/_flexbox.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/css\/layouts\/_grid-busted.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/layouts\/_grid-busted.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/css\/layouts\/_grid.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/layouts\/_grid.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/css\/layouts\/_layout.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -526,6 +499,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/layouts\/_layout.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/libs\/bootstrap-grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/libs\/bootstrap-grid.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -646,6 +632,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/pages\/_common.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/pages\/_product.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/pages\/_product.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1023,6 +1022,12 @@
 		"oAP": "\/hero.html.erb",
 		"oF": 0
 		},
+	"\/home.html.erb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/home.html.erb",
+		"oF": 0
+		},
 	"\/img\/.keep": {
 		"ft": 8192,
 		"oA": 2,
@@ -1270,7 +1275,7 @@
 		},
 	"\/js\/site.js": {
 		"ft": 64,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/js\/min\/site-min.js",
 		"oF": 2,
@@ -1305,6 +1310,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/partials\/_mobile-menu.erb",
+		"oF": 0
+		},
+	"\/product.html.erb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/product.html.erb",
 		"oF": 0
 		},
 	"\/typography.html.erb": {
@@ -2194,6 +2205,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -2522,6 +2537,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -2615,6 +2634,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},

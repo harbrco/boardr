@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<!-- Use title if it's in the page YAML frontmatter -->
-		<title>Grid System</title>
+		<title>Product Page</title>
 
 		<!-- FONTS -->
 		<script src="https://use.typekit.net/byn3uae.js"></script>
@@ -346,116 +346,286 @@
 
 <div class="middle-wrapper">
 
-			<style>
-.pattern-test-grid {
-	background-color: rgba(0,0,0,0.15);
-}
+			<div class="wrapper well">
+	<div class="product-intro container--l">
+		<div class="grid-container">
+			<div class="row">
+				<div class="col col-lg-6">
+					<div class="mobile-product-title">
+						<h1>Product Name Example Right Here</h1>
+					</div>
 
-.pattern-test-grid .col {
-	background-color: rgba(0,0,0,0.15);
-	min-height: 30px;
-	box-shadow: inset 0 0 1px black;
-}
-</style>
-
-
-
-<div class="wrapper isWhite well--l">
-	<div class="container">
-		<h2>Modified Bootstrap Grid</h2>
-		<p>We're using a lightly modified version of the Bootstrap 4 grid.  You can read the docs here:  https://v4-alpha.getbootstrap.com/layout/grid/</p>
-		<p>The main differences in modifications that I've done:</p>
-		<ul>
-			<li>Bootstrap's "container" and "container-fluid" classes are changed to simply "grid-container".  We use "container" as a main layout element class name in our framework.  So I converted the regular "container" class to just be fluid by default, as we're not wanting any fixed max-width's on grid wrappers.</li>
-			<li>I've added a width breakpoint in between the regular ".col" and ".col-s" breakpoints - and I've named it ".col-tn" (for tiny).  This new breakpoint has all the same features as the "col" class, its just set to a min-width of 421px.  This was mostly needed for some instances where below 420, a column could take up the full width, but then between 421 and 576, it was fine to be 2 columns wide. You'll see an example below and also on the <a href="/home">Home page</a> in "The Boardr Fund" card layout.</li>
-			<li>I also modified the outer grid structure by eliminating the outer padding that comes with the grid.  It just helps to keep the outer lines straight with the rest of our "container" classes.</li>
-			<li>There are some additional "gutter" classes available as well, in case you want extra space between the columns.  These can be used by adding a "gutter-50", "gutter-80", "gutter-100" class to the "row" element.  Those gutter numbers are represented at desktop width between the columns... 50px, 80px, and 100px respectively.  I've scaled down those pixel amounts a couple times per breakpoint down to mobile, so that all the mobile gutters have the same width.</li>
-			<li>(The "pattern-test-grid" class is just used for examples on this page, its not needed for production)</li>
-			<li>Some documentation for layout classes EX: container widths, padding ('well' system), etc... on our framework (named Marina) can be found here: <a href="https://github.com/harbrco/marina/wiki" target="_blank">https://github.com/harbrco/marina/wiki</a>  &nbsp;(You can disregard any mentions of Grid, Modular Flexbox, or "Cards" in that documentation - those areas are all omitted from The Boardr's files.)  Marina is definitely an ongoing work-in-progress.</li>
-		</ul>
-
-		<h3>Some Grid examples</h3>
-
-		<div class="well--s pt--none">
-			<h4>Just 3 columns</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col">Always 1 of 3</div>
-					<div class="col">Always 1 of 3</div>
-					<div class="col">Always 1 of 3</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="well--s pt--none">
-			<h4>3 columns at desktop, 2 at tablet, 1 at mobile</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-sm-6 col-lg-4">.col-12 .col-md-6 .col-lg-4</div>
-					<div class="col col-12 col-sm-6 col-lg-4">.col-12 .col-md-6 .col-lg-4</div>
-					<div class="col col-12 col-sm-6 col-lg-4">.col-12 .col-md-6 .col-lg-4</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="well--s pt--none">
-			<h4>4 columns at desktop, 2 at tablet, 1 at TINY mobile</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="well--s pt--none">
-			<h4>Nested Grid Example - Two outer columns</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-md-6">
-						left outer column<br />
-						<div class="grid-container">
-							<div class="row">
-								<div class="col col-12 col-sm-4">1 of 3</div>
-								<div class="col col-12 col-sm-4">1 of 3</div>
-								<div class="col col-12 col-sm-4">1 of 3</div>
-							</div>
+					<div class="product-slider-wrapper wrapper">
+						<div class="product-slider">
+							<img src="/img/card-img-2a.jpg" alt="">
+							<img src="/img/card-img-2b.jpg" alt="">
+							<img src="/img/card-img-2c.jpg" alt="">
+							<img src="/img/card-img-2a.jpg" alt="">
+							<img src="/img/card-img-2b.jpg" alt="">
+							<img src="/img/card-img-2c.jpg" alt="">
+							<img src="/img/card-img-2a.jpg" alt="">
+							<img src="/img/card-img-2b.jpg" alt="">
+							<img src="/img/card-img-2c.jpg" alt="">
+						</div>
+						<div class="product-slider-arrows slider-arrows whiteArrows">
+							<div class="inner container--l"></div>
 						</div>
 					</div>
-					<div class="col col-12 col-md-6">
-						right outer column<br />
-						<div class="grid-container">
-							<div class="row">
-								<div class="col col-12 col-sm-6">1 of 2</div>
-								<div class="col col-12 col-sm-6">1 of 2</div>
-							</div>
+
+					<div class="product-slider-nav-wrapper wrapper">
+						<div class="product-slider-nav">
+							<img src="/img/card-img-2a.jpg" alt="">
+							<img src="/img/card-img-2b.jpg" alt="">
+							<img src="/img/card-img-2c.jpg" alt="">
+							<img src="/img/card-img-2a.jpg" alt="">
+							<img src="/img/card-img-2b.jpg" alt="">
+							<img src="/img/card-img-2c.jpg" alt="">
+							<img src="/img/card-img-2a.jpg" alt="">
+							<img src="/img/card-img-2b.jpg" alt="">
+							<img src="/img/card-img-2c.jpg" alt="">
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
 
-		<div class="well--s pt--none">
-			<h4>Long List of "Cards"</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
+				<div class="product-details col col-lg-6">
+					<div class="inner">
+						<h1>Product Name Example Right Here</h1>
+
+						<div class="product-description">
+							<h3>Product Description</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies, eros sit amet blandit bibendum, nisl metus volutpat massa, non tempus metus libero in risus. In elementum sagittis ipsum, et commodo odio pharetra sit amet. Fusce lobortis, nisi id pellentesque porttitor, dolor lectus iaculis libero, a pulvinar leo dolor in tortor.</p>
+							<p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam at eros sed orci venenatis egestas at vel eros. Mauris euismod fermentum accumsan. Donec posuere nisi at justo vulputate sit amet viverra sem blandit.</p>
+						</div>
+
+						<div class="product-options">
+							<h3>Product Options</h3>
+							<div class="grid-container">
+								<div class="row btn-grid">
+									<div class="col-4 col-sm-3"><a href="#" class="btn btn--alt">5</a></div>
+									<div class="col-4 col-sm-3"><a href="#" class="btn btn--alt">6</a></div>
+									<div class="col-4 col-sm-3"><a href="#" class="btn btn--alt btn--disabled">7</a></div>
+									<div class="col-4 col-sm-3"><a href="#" class="btn btn--alt btn--disabled">8</a></div>
+									<div class="col-4 col-sm-3"><a href="#" class="btn btn--alt">9</a></div>
+									<div class="col-4 col-sm-3"><a href="#" class="btn btn--alt">10</a></div>
+									<div class="col-4 col-sm-3"><a href="#" class="btn btn--alt">11</a></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="btn-row">
+							<a href="#" class="btn">Add To Cart</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
+
+<div class="wrapper well--s">
+	<div class="container--l">
+		<div class="section-heading container--s center-text well pb--s">
+			<h2>Related Products</h2>
+		</div>
+
+		<div class="card-list grid-container">
+			<div class="row gutter-50">
+				<div class="col-6 col-lg-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2a.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<a href="#" class="text-link">Shop Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2b.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<a href="#" class="text-link">Shop Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2c.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<a href="#" class="text-link">Shop Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper well--s pt--l">
+	<div class="container--l">
+		<div class="card-list grid-container">
+			<div class="row gutter-50">
+				<div class="col-12 col-tn-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-1a.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Brad Cramer</h3>
+							<p>Sponsors & Shouts - Krooked, HUF, Shred Shed, Spitfire, Brixton</p>
+							<p>Vitals - From: Palm Beach Gardens FL. Stance: Regular. 29 years old.</p>
+							<a href="#" class="text-link">View Profile</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-tn-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-1b.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Curren Caples</h3>
+							<p>Sponsors & Shouts - Flip Skateboards, Oakley, Monster, RVCA, Indy, Vans, Ricta Wheels, Mob Grip, Momentum Ride Shop, Bones Swiss, Target</p>
+							<p>Vitals - From: Palm Beach Gardens FL. Stance: Regular. 29 years old.</p>
+							<a href="#" class="text-link">View Profile</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper well--s pb--l">
+	<div class="section-heading container--s center-text well">
+		<h2>Other Shoe Brands</h2>
+		<p>Shoes are probably the single most important thing in skateboarding outside of your skateboard itself.  Function matters of course, but the judgement cast on you for your choice in footwear can be intense. Let us guide you.</p>
+		<div class="btn-row center-btns">
+			<a href="#" class="btn">Shop All Shoes</a>
+		</div>
+	</div>
+
+	<div class="card-carousel-wrapper wrapper">
+		<div class="card-carousel container--l ">
+			<div class="card-list">
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2a.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2b.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2c.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2b.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2a.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2c.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2a.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2b.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<a href="#"><img src="/img/card-img-2c.jpg" alt=""></a>
+					</div>
+
+					<div class="card-text">
+						<h3>Card Title Text</h3>
+						<a href="#" class="text-link">Shop Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card-carousel-arrows slider-arrows blackArrows">
+			<div class="inner container--l"></div>
+		</div>
+	</div><!-- /.card-carousel-wrapper -->
 </div>
 
 			</div><!-- /.middle-wrapper -->

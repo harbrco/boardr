@@ -1,7 +1,3 @@
-.card-list {
-
-}
-
 .card {
 	.card-img {
 		@extend %hoverTrans;
@@ -9,6 +5,11 @@
 
 		&:hover {
 			@include hoverFade(0.6);
+		}
+
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 
@@ -41,6 +42,100 @@
 		}
 	}
 }
+@media only screen and (max-width:900px) {
+	.card {
+		.card-img {
+			margin-bottom: 26px;
+		}
+
+		.card-text {
+			margin-bottom: 26px;
+
+			h3 {
+				font-size: 18px;
+				line-height: 22px;
+				letter-spacing: 1px;
+				margin-bottom: 5px;
+			}
+
+			p {
+				margin-top: 3px;
+				margin-bottom: 2px;
+
+				&:last-child {
+					margin-bottom: 7px;
+				}
+			}
+
+			a.text-link {
+				margin-top: 11px;
+			}
+		}
+	}
+}
+@media only screen and (max-width:768px) {
+	.card {
+		.card-img {
+			margin-bottom: 22px;
+		}
+
+		.card-text {
+			margin-bottom: 22px;
+
+			h3 {
+				font-size: 16px;
+				line-height: 20px;
+				margin-bottom: 4px;
+			}
+
+			p {
+				margin-top: 2px;
+				margin-bottom: 2px;
+
+				&:last-child {
+					margin-bottom: 6px;
+				}
+			}
+
+			a.text-link {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+@media only screen and (max-width:580px) {
+	.card {
+		.card-img {
+			margin-bottom: 20px;
+		}
+
+		.card-text {
+			margin-bottom: 20px;
+
+			h3 {
+				font-size: 15px;
+				line-height: 19px;
+				margin-bottom: 3px;
+			}
+
+			p {
+				margin-top: 2px;
+				margin-bottom: 2px;
+
+				&:last-child {
+					margin-bottom: 6px;
+				}
+			}
+
+			a.text-link {
+				font-size: 14px;
+				line-height: 17px;
+				margin-top: 8px;
+			}
+		}
+	}
+}
+
 
 .card-carousel-wrapper {
 	.card-carousel {

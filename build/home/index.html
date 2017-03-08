@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<!-- Use title if it's in the page YAML frontmatter -->
-		<title>Grid System</title>
+		<title>Home | The Boarder</title>
 
 		<!-- FONTS -->
 		<script src="https://use.typekit.net/byn3uae.js"></script>
@@ -346,112 +346,251 @@
 
 <div class="middle-wrapper">
 
-			<style>
-.pattern-test-grid {
-	background-color: rgba(0,0,0,0.15);
-}
-
-.pattern-test-grid .col {
-	background-color: rgba(0,0,0,0.15);
-	min-height: 30px;
-	box-shadow: inset 0 0 1px black;
-}
-</style>
-
-
-
-<div class="wrapper isWhite well--l">
-	<div class="container">
-		<h2>Modified Bootstrap Grid</h2>
-		<p>We're using a lightly modified version of the Bootstrap 4 grid.  You can read the docs here:  https://v4-alpha.getbootstrap.com/layout/grid/</p>
-		<p>The main differences in modifications that I've done:</p>
-		<ul>
-			<li>Bootstrap's "container" and "container-fluid" classes are changed to simply "grid-container".  We use "container" as a main layout element class name in our framework.  So I converted the regular "container" class to just be fluid by default, as we're not wanting any fixed max-width's on grid wrappers.</li>
-			<li>I've added a width breakpoint in between the regular ".col" and ".col-s" breakpoints - and I've named it ".col-tn" (for tiny).  This new breakpoint has all the same features as the "col" class, its just set to a min-width of 421px.  This was mostly needed for some instances where below 420, a column could take up the full width, but then between 421 and 576, it was fine to be 2 columns wide. You'll see an example below and also on the <a href="/home">Home page</a> in "The Boardr Fund" card layout.</li>
-			<li>I also modified the outer grid structure by eliminating the outer padding that comes with the grid.  It just helps to keep the outer lines straight with the rest of our "container" classes.</li>
-			<li>There are some additional "gutter" classes available as well, in case you want extra space between the columns.  These can be used by adding a "gutter-50", "gutter-80", "gutter-100" class to the "row" element.  Those gutter numbers are represented at desktop width between the columns... 50px, 80px, and 100px respectively.  I've scaled down those pixel amounts a couple times per breakpoint down to mobile, so that all the mobile gutters have the same width.</li>
-			<li>(The "pattern-test-grid" class is just used for examples on this page, its not needed for production)</li>
-			<li>Some documentation for layout classes EX: container widths, padding ('well' system), etc... on our framework (named Marina) can be found here: <a href="https://github.com/harbrco/marina/wiki" target="_blank">https://github.com/harbrco/marina/wiki</a>  &nbsp;(You can disregard any mentions of Grid, Modular Flexbox, or "Cards" in that documentation - those areas are all omitted from The Boardr's files.)  Marina is definitely an ongoing work-in-progress.</li>
-		</ul>
-
-		<h3>Some Grid examples</h3>
-
-		<div class="well--s pt--none">
-			<h4>Just 3 columns</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col">Always 1 of 3</div>
-					<div class="col">Always 1 of 3</div>
-					<div class="col">Always 1 of 3</div>
+			<div class="hero-wrapper wrapper">
+	<div class="hero hero-slider wrapper">
+		<div class="hero-slide fullVP hasOverlay" style="background-image: url('/img/hero-1.jpg');">
+			<div class="overlay overlay--15"></div>
+			<div class="hero-content container--s overlay-content vAlign">
+				<h3>Events</h3>
+				<h2>The Boardr Am <br />
+					NYC 2017</h2>
+				<div class="center-btns btn-row">
+					<a href="#" class="btn btn--noOutlineHover">Register Now</a>
 				</div>
 			</div>
 		</div>
 
-		<div class="well--s pt--none">
-			<h4>3 columns at desktop, 2 at tablet, 1 at mobile</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-sm-6 col-lg-4">.col-12 .col-md-6 .col-lg-4</div>
-					<div class="col col-12 col-sm-6 col-lg-4">.col-12 .col-md-6 .col-lg-4</div>
-					<div class="col col-12 col-sm-6 col-lg-4">.col-12 .col-md-6 .col-lg-4</div>
+		<div class="hero-slide fullVP hasOverlay" style="background-image: url('/img/hero-1.jpg');">
+			<div class="overlay"></div>
+			<div class="hero-content container--s overlay-content vAlign">
+				<h3>Freshly Dropped</h3>
+				<h2>The Hupper 2 Lo</h2>
+				<div class="center-btns btn-row">
+					<a href="#" class="btn btn--noOutlineHover">Shop Now</a>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="well--s pt--none">
-			<h4>4 columns at desktop, 2 at tablet, 1 at TINY mobile</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-lg-3">.col-12 .col-tn-6 .col-lg-3</div>
-				</div>
+	<div class="slider-arrows whiteArrows">
+		<div class="inner container--full"></div>
+	</div>
+</div>
+
+
+<div class="wrapper well--s">
+	<div class="container--l">
+		<div class="section-heading container--s center-text well">
+			<h2>The Boardr Fund</h2>
+			<p>The Boardr Fund makes it easy for the skateboarding community to support their favorite pros, ams, and up and comers. Find out more and start your own. If your favorite skater doesn't have a Boardr Fund, tell them to get it started!</p>
+			<div class="btn-row center-btns">
+				<a href="#" class="btn">Apply Now</a>
 			</div>
 		</div>
 
-		<div class="well--s pt--none">
-			<h4>Nested Grid Example - Two outer columns</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-md-6">
-						left outer column<br />
-						<div class="grid-container">
-							<div class="row">
-								<div class="col col-12 col-sm-4">1 of 3</div>
-								<div class="col col-12 col-sm-4">1 of 3</div>
-								<div class="col col-12 col-sm-4">1 of 3</div>
-							</div>
+		<div class="card-list grid-container">
+			<div class="row">
+				<div class="col-12 col-tn-6 col-md-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2a.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<a href="#" class="text-link">View Profile</a>
 						</div>
 					</div>
-					<div class="col col-12 col-md-6">
-						right outer column<br />
-						<div class="grid-container">
-							<div class="row">
-								<div class="col col-12 col-sm-6">1 of 2</div>
-								<div class="col col-12 col-sm-6">1 of 2</div>
-							</div>
+				</div>
+				<div class="col-12 col-tn-6 col-md-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2b.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<a href="#" class="text-link">View Profile</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-tn-6 col-md-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2c.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<a href="#" class="text-link">View Profile</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 
-		<div class="well--s pt--none">
-			<h4>Long List of "Cards"</h4>
-			<div class="grid-container pattern-test-grid">
-				<div class="row">
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
-					<div class="col col-12 col-tn-6 col-sm-4 col-lg-3">.col-12 .col-tn-6 .col-sm-4 .col-lg-3</div>
+
+<div class="wrapper well--s pt--none">
+	<div class="container--l">
+		<div class="section-heading container--s center-text well">
+			<h2>Latest News</h2>
+			<div class="btn-row center-btns">
+				<a href="#" class="btn">View All</a>
+			</div>
+		</div>
+
+		<div class="card-list grid-container">
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-1a.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Example Blog Post Title</h3>
+							<a href="#" class="text-link">Read Up</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-1b.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Another Blog Post Title That's Pretty Long</h3>
+							<a href="#" class="text-link">Read Up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="wrapper well--s pt--none">
+	<div class="container--l">
+		<div class="section-heading container--s center-text well">
+			<h2>Upcoming Events</h2>
+			<div class="btn-row center-btns">
+				<a href="#" class="btn">View All</a>
+			</div>
+		</div>
+
+		<div class="card-list grid-container">
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-1b.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Foundation "Oddity" Video Showing</h3>
+							<p>February 17, 2017, Tampa, Florida</p>
+							<a href="#" class="text-link">Full Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-1a.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Vans Park Series Global Qualifiers at Manly</h3>
+							<p>February 27 - March 4, 2017, Manly, Australia</p>
+							<a href="#" class="text-link">Full Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-1b.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Zappos Rideshop at Las Vegas</h3>
+							<p>April 22, 2017, Las Vegas, Nevada</p>
+							<a href="#" class="text-link">Full Details</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="wrapper well pt--none">
+	<div class="container--l">
+		<div class="section-heading container--s center-text well pb--s">
+			<h2>Featured Products</h2>
+			<div class="btn-row center-btns">
+				<a href="#" class="btn">View All</a>
+			</div>
+		</div>
+
+		<div class="card-list grid-container">
+			<div class="row">
+				<div class="col-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2a.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<p>A short description of the product can go here</p>
+							<a href="#" class="text-link">Shop Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2b.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<p>A short description of the product can go here</p>
+							<a href="#" class="text-link">Shop Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2c.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<p>A short description of the product can go here</p>
+							<a href="#" class="text-link">Shop Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="card">
+						<div class="card-img">
+							<a href="#"><img src="/img/card-img-2a.jpg" alt=""></a>
+						</div>
+
+						<div class="card-text">
+							<h3>Card Title Text</h3>
+							<p>A short description of the product can go here</p>
+							<a href="#" class="text-link">Shop Now</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

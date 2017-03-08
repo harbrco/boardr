@@ -1,8 +1,4 @@
 .product-intro {
-	.mobile-product-title {
-		display: none;
-	}
-
 	.product-slider-wrapper {
 		img {
 			width: 100%;
@@ -51,13 +47,162 @@
 			}
 		}
 	}
+
+	.mobile-product-title {
+		display: none;
+		margin-bottom: 40px;
+
+		h1 {
+			font-size: 40px;
+			line-height: 48px;
+			letter-spacing: 2px;
+		}
+	}
+
+	.product-details {
+		.inner {
+			padding-left: 2%;
+			padding-right: 6%;
+		}
+
+		h1 {
+			font-size: 40px;
+			line-height: 50px;
+			letter-spacing: 3px;
+		}
+
+		h3 {
+			font-size: 20px;
+			line-height: 24px;
+			margin-bottom: 12px;
+			letter-spacing: 2px;
+		}
+
+		.product-description {
+			margin-bottom: 40px;
+		}
+
+		.product-options {
+			margin-bottom: 20px;
+
+			h3 {
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 
+@media only screen and (max-width:1440px) {
+	.product-intro {
+		.product-details {
+			.inner {
+				padding-left: 1.5%;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:1280px) {
+	.product-intro {
+		.product-slider-wrapper {
+			.slider-arrows {
+				.slick-next {
+					right: 2%;
+				}
+				.slick-prev {
+					left: 2%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:1140px) {
+	.product-intro {
+		.product-details {
+			h1 {
+				font-size: 36px;
+				line-height: 46px;
+			}
+		}
+	}
+}
 
 @media only screen and (max-width:900px) {
 	.product-intro {
+		.product-slider-wrapper,
+		.product-slider-nav-wrapper {
+			width: calc(100% + 20px);
+			margin-left: -10px;
+		}
+
+		.product-slider-wrapper {
+			.slider-arrows {
+				.slick-next {
+					right: 0;
+				}
+				.slick-prev {
+					left: 0;
+				}
+			}
+		}
+
 		.mobile-product-title {
 			display: block;
+		}
+
+		.product-details {
+			.inner {
+				padding: 50px 5% 0 0;
+			}
+
+			h1 {
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.product-intro {
+		.mobile-product-title {
+			h1 {
+				font-size: 34px;
+				line-height: 42px;
+			}
+		}
+
+		.product-details {
+			.inner {
+				padding: 50px 0 0 0;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:580px) {
+	.product-intro {
+		.product-slider-wrapper {
+			.slider-arrows {
+				.slick-next {
+					right: 2%;
+				}
+				.slick-prev {
+					left: 2%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.product-intro {
+		.mobile-product-title {
+			h1 {
+				font-size: 28px;
+				line-height: 36px;
+			}
 		}
 	}
 }

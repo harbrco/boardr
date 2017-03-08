@@ -137,24 +137,14 @@
 			heroSlider.slick({
 				dots: false,
 				fade: true,
+				autoplay: true,
+				autoplaySpeed: 5000,
 				infinite: true,
 				draggable: false,
 				appendArrows: '.slider-arrows .inner',
 				customPaging : function(slider, i) {
 					$(slider.$slides[i]).data();
 					return '<a class="btn btn--alt">0'+(i+1)+'</a>';
-				}
-			}).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-				var thisSlider = $(this);
-				var thisSliderPager = thisSlider.closest('.slider-container').find('.slick-dots');
-				var nextSlideEl = $(slick.$slides.get(nextSlide));
-
-				thisSliderPager.removeClass('pagerIsLight pagerIsDark');
-
-				if ( nextSlideEl.hasClass('light-pager') ) {
-					thisSliderPager.addClass('pagerIsLight');
-				} else {
-					thisSliderPager.addClass('pagerIsDark');
 				}
 			});
 
@@ -236,33 +226,121 @@
 
 		// Content Module Sliders
 		var cardCarousel = $('.card-carousel .card-list');
-
 		if ( cardCarousel.length >= 1 ) {
-			cardCarousel.slick({
-				dots: false,
+			cardCarousel.each(function (idx) {
+				var carouselId = "carousel" + idx;
+				var $el = $(this);
+				var $wrapper = $el.closest('.card-carousel-wrapper');
+				$wrapper.addClass(carouselId);
+				$el.attr('id', carouselId);
+
+				$el.slick({
+					dots: false,
+					infinite: true,
+					draggable: false,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					appendArrows: ".card-carousel-wrapper." + carouselId + " .card-carousel-arrows .inner",
+					responsive: [
+						{
+							breakpoint: 1280,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 3
+							}
+						},
+						{
+						breakpoint: 900,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2
+							}
+						}
+					]
+				});
+			});
+		}
+
+
+		var ctaSlider = $('.cta-slider');
+		if ( ctaSlider.length >= 1 ) {
+			ctaSlider.each(function (idx) {
+				var sliderId = "slider" + idx;
+				var $el = $(this);
+				var $wrapper = $el.closest('.cta-slider-wrapper');
+				$wrapper.addClass(sliderId);
+				$el.attr('id', sliderId);
+
+				$el.slick({
+					slide: "#" + sliderId +" .slide",
+					appendArrows: ".cta-slider-wrapper." + sliderId + " .cta-slider-arrows .inner",
+					dots: false,
+					fade: true,
+					infinite: true,
+					draggable: false
+				});
+			});
+		}
+
+
+		var productSlider = $('.product-slider');
+		var productSliderNav = $('.product-slider-nav');
+		if ( productSliderNav.length >= 1 ) {
+			productSlider.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				adaptiveHeight: true,
+				appendArrows: '.product-slider-arrows .inner',
+				asNavFor: productSliderNav
+			});
+
+			productSliderNav.slick({
+				slidesToShow: 7,
+				slidesToScroll: 1,
+				asNavFor: productSlider,
+				centerPadding: '0',
 				infinite: true,
-				draggable: false,
-				slidesToShow: 4,
-				slidesToScroll: 4,
-				appendArrows: '.slider-arrows .inner',
+				focusOnSelect: true,
+				dots: false,
+				arrows: false,
 				responsive: [
 					{
-						breakpoint: 1280,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 3
-						}
+						breakpoint: 1440,
+						settings: { slidesToShow: 6 }
 					},
 					{
-					breakpoint: 768,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2
-						}
+						breakpoint: 1280,
+						settings: { slidesToShow: 5 }
+					},
+					{
+					breakpoint: 1024,
+						settings: { slidesToShow: 4 }
+					},
+					{
+						breakpoint: 900,
+						settings: { slidesToShow: 7 }
+					},
+					{
+						breakpoint: 768,
+						settings: { slidesToShow: 6 }
+					},
+					{
+						breakpoint: 680,
+						settings: { slidesToShow: 5 }
+					},
+					{
+					breakpoint: 580,
+						settings: { slidesToShow: 4 }
+					},
+					{
+					breakpoint: 460,
+						settings: { slidesToShow: 3 }
 					}
 				]
 			});
 		}
+
 
 
 
@@ -330,40 +408,6 @@
 			// });
 		};
 		waypointInit();
-
-
-
-		// MAKE SURE TO ADD ANY NEW LIBRARIES TO THIS INIT FUNCTION (For AJAX script reloading) - - - - - - -
-		/* jshint ignore:start */
-		// var libsInit = function() {
-		// 	vAlignShow();
-		// 	vAlignFun();
-		// 	aosInit();
-
-		// 	$.stellar('destroy');
-		// 	setTimeout(function(){
-		// 		stellarJsInit();
-		// 	}, 200);
-
-		// 	screenSizeCalc();
-		// 	smoothScroll();
-
-		// 	setTimeout(function(){
-		// 		Waypoint.refreshAll();
-		// 		waypointInit();
-		// 	}, 200);
-
-		// 	$(window).resize(function() {
-		// 		vAlignFun();
-		// 		screenSizeCalc();
-		// 	}).resize();
-
-		// 	// Listen for resize changes (mobile orientation change)
-		// 	window.addEventListener("resize", function() {
-		// 		vAlignFun();
-		// 	}, false);
-		// };
-		/* jshint ignore:end */
 
 
 	});
