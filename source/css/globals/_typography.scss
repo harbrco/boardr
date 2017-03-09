@@ -49,11 +49,13 @@
 		line-height: 24px;
 		margin-bottom: 20px;
 		letter-spacing: 1px;
+		margin-left: 18px;
+		margin-top: 10px;
 
 		li {
 			line-height: 19px;
 			margin-bottom: 14px;
-			margin-left: 60px;
+			margin-left: 8px;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -146,6 +148,13 @@
 			font-size: 19px;
 			line-height: 25px;
 		}
+
+		ul,
+		ol {
+			li {
+				margin-left: 7px;
+			}
+		}
 	}
 }
 
@@ -170,6 +179,13 @@
 			font-size: 18px;
 			line-height: 24px;
 		}
+
+		ul,
+		ol {
+			li {
+				margin-left: 6px;
+			}
+		}
 	}
 }
 
@@ -193,6 +209,33 @@
 		h4 {
 			font-size: 17px;
 			line-height: 23px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 23px;
+			margin-bottom: 18px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		ul,
+		ol {
+			font-size: 14px;
+			line-height: 23px;
+			margin-bottom: 18px;
+
+			li {
+				line-height: 19px;
+				margin-left: 5px;
+				margin-bottom: 13px;
+
+				&:last-child {
+					margin-bottom: 6px;
+				}
+			}
 		}
 	}
 }
