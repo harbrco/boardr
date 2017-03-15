@@ -659,7 +659,7 @@
 		"oA": 0,
 		"oAP": "\/css\/min\/site-min.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 3,
 		"uL": 0
 		},
 	"\/fonts\/font-awesome\/css\/font-awesome.css": {
@@ -1275,7 +1275,7 @@
 		},
 	"\/js\/site.js": {
 		"ft": 64,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/site-min.js",
 		"oF": 2,
