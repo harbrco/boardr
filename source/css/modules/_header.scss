@@ -339,15 +339,25 @@
 		opacity: 0;
 		@extend %hoverTrans;
 
+		form {
+			padding: 0;
+		}
+
 		input {
 			width: 100%;
 			height: 46px;
 			font-size: 20px;
 			line-height: 24px;
 			letter-spacing: 2px;
+			font-weight: 300;
 			text-align: center;
 			padding: 0;
 			border: none;
+
+			&:focus {
+				border: none;
+				box-shadow: none;
+			}
 		}
 
 		&.isActive {

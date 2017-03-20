@@ -7,7 +7,7 @@
 		"uuidString": "8E13E601-EE75-426D-845A-BED127A24BE2"
 		}
 	],
-"creatorBuild": "25568",
+"creatorBuild": "25704",
 "files": {
 	"\/buttons.html.erb": {
 		"ft": 8192,
@@ -1040,7 +1040,8 @@
 		"oA": 0,
 		"oAP": "\/img\/card-img-1a.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/card-img-1b.jpg": {
 		"ft": 16384,
@@ -1048,7 +1049,8 @@
 		"oA": 0,
 		"oAP": "\/img\/card-img-1b.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/card-img-2a.jpg": {
 		"ft": 16384,
@@ -1056,7 +1058,8 @@
 		"oA": 0,
 		"oAP": "\/img\/card-img-2a.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/card-img-2b.jpg": {
 		"ft": 16384,
@@ -1064,7 +1067,8 @@
 		"oA": 0,
 		"oAP": "\/img\/card-img-2b.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/card-img-2c.jpg": {
 		"ft": 16384,
@@ -1072,7 +1076,8 @@
 		"oA": 0,
 		"oAP": "\/img\/card-img-2c.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/hero-1.jpg": {
 		"ft": 16384,
@@ -1080,7 +1085,8 @@
 		"oA": 0,
 		"oAP": "\/img\/hero-1.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/icons\/favicon.ico": {
 		"ft": 8192,
@@ -1091,58 +1097,72 @@
 	"\/img\/icons\/slider-arrow-left-black@2x.png": {
 		"ft": 32768,
 		"iS": 610,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/slider-arrow-left-black@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/icons\/slider-arrow-left-white@2x.png": {
 		"ft": 32768,
 		"iS": 673,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/slider-arrow-left-white@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/icons\/slider-arrow-right-black@2x.png": {
 		"ft": 32768,
 		"iS": 606,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/slider-arrow-right-black@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/icons\/slider-arrow-right-white@2x.png": {
 		"ft": 32768,
 		"iS": 650,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/slider-arrow-right-white@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/icons\/touch.png": {
 		"ft": 32768,
 		"iS": 15472,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/icons\/touch.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/logo-blk@2x.png": {
 		"ft": 32768,
 		"iS": 8808,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logo-blk@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/logo-wht@2x.png": {
 		"ft": 32768,
 		"iS": 9125,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/logo-wht@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/index.html.erb": {
 		"ft": 8192,
@@ -2005,6 +2025,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -2484,6 +2508,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -3084,7 +3112,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -3177,7 +3206,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"enableLossy": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
